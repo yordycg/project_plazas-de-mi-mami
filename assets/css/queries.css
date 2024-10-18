@@ -1,0 +1,41 @@
+/*
+ * Mobil <= 480px
+ * Tablet <= 834px
+ * Desktop <= 1440px || <= 1200px
+*/
+/****************/
+/* LOGIN TABLET - bajo 834px */
+/****************/
+@media (width <= 834px) {
+  .container--login {
+    max-width: 650px;
+  }
+  .form--login h1 {
+    font-size: 24px;
+  }
+  .form--login h2 {
+    font-size: 18px;
+  }
+  .sidebar {
+    max-width: 200px;
+  }
+}
+/****************/
+/* LOGIN MOBILE - bajo 480px */
+/****************/
+@media (width <= 480px) {
+  .container--login {
+    width: 400px;
+  }
+  .login--img {
+    display: none;
+  }
+}
+/****************/
+/* HEADER - bajo 1403px */
+/****************/
+@media (width <= 1400px) {
+  .header--container {
+    width: 1200px;
+  }
+}

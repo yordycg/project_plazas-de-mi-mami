@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--ESTO ES PARA PRECARGAR LAS PAGINA-->
+    <link
+      rel="prerender"
+      href="../../-Proyecto_Ev-3/proyecto/assets/public/agregar_producto.html" />
+    <link
+      rel="prerender"
+      href="../../-Proyecto_Ev-3/proyecto/assets/public/agregar_proveedor.html" />
+    <link rel="prerender" href="../../-Proyecto_Ev-3/proyecto/assets/public/inventario.html" />
+    <link
+      rel="prerender"
+      href="../../-Proyecto_Ev-3/proyecto/assets/public/modificar_empleado.html" />
+    <link rel="prerender" href="../../-Proyecto_Ev-3/proyecto/assets/public/proveedores.html" />
+    <link
+      rel="prerender"
+      href="../../-Proyecto_Ev-3/proyecto/assets/private/agregar_empleado.html" />
+    <link rel="prerender" href="../../-Proyecto_Ev-3/proyecto/assets/private/empleados.html" />
+    <link rel="prerender" href="../../-Proyecto_Ev-3/proyecto/index_back.html" />
+    <!--------------------------------------------------------------------->
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/test-grid.css" />
+    <link rel="stylesheet" href="assets/css/queries2.css" />
+    <title>Agregar Empleado| Piezas de Mi Mami</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- ! ========== HEADER ========== -->
+
+      <header class="header">
+        <div class="header--container">
+          <div class="header--title">
+            <a href="../../index.html">
+              <img
+                class="logo"
+                src="../images/logo_plazas-de-mi-mami 2.ico"
+                alt="logo de inventario" />
+            </a>
+            <h1>Plazas de mi Mami</h1>
+          </div>
+          <div class="header--user">
+            <a href="../public/modificar_empleado.html">
+              <p>Admin</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- ! ========== SIDEBAR ========== -->
+
+      <aside class="sidebar">
+        <!-- ! Búsqueda solo por texto -->
+        <div class="sidebar--search">
+          <div class="container--row">
+            <input
+              class="search--bar"
+              placeholder="Buscar un producto..."
+              autocomplete="off"
+              type="text" />
+            <button class="search--btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M10 18a7.95 7.95 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.95 7.95 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8m0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6" />
+              </svg>
+            </button>
+          </div>
+          <div class="search--result"></div>
+        </div>
+        <ul>
+          <!-- TODO: productos o inventario? -->
+          <li><a href="inventario.html" class="button--aside">Productos</a></li>
+          <li><a href="proveedores.html" class="button--aside">Proveedores</a></li>
+          <li><a href="../private/empleados.html" class="button--aside">Empleados</a></li>
+          <li><a href="inventario.html" class="button--aside">Productos</a></li>
+        </ul>
+      </aside>
+
+      <!-- ! ========== MAIN ========== -->
+      <main class="main">
+        <h2>Agregar Usuario:</h2>
+        <!--Para cuadros de texto label-->
+        <!--Label usa for para vincular a input-->
+        <label for="Nombre">Nombres:</label>
+        <!--Para poner ejemplo usamos placeholder-->
+        <!--Input id Deber ser igual a for-->
+        <input id="Nombre" type="text" placeholder="Lucas " />
+
+        <label for="Apellido">Apellidos:</label>
+        <input id="Apellido" type="text" placeholder="Jara" />
+
+        <label for="Rut">Rut:</label>
+        <input id="Rut" type="text" placeholder="00.000.000-0" />
+
+        <label for="Direccion">Direccion </label>
+        <input id="Direccion" type="text" placeholder="Avenida Kong 367, Nintendo" />
+
+        <label for="Nacimiento"> Fecha de Nacimiento </label>
+        <input id="Nacimiento" type="text" placeholder="03-01-01" />
+
+        <!---->
+
+        <label for="Numero">Numero Telefonico: </label>
+        <input id="Numero" type="text" placeholder="978904532" />
+
+        <label for="Correo">Correo Electronico:</label>
+        <input id="Correo" type="text" placeholder="Luquitasbcspn@Gmail.com" />
+
+        <button>Crear Usuario</button>
+        <button>Cancelar</button>
+      </main>
+
+      <!-- ! ========== FOOTER ========== -->
+
+      <footer class="footer">
+        <p>&copy; 2024 Plazas De Mi Mami</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+:root {
+  --color-primary: #facc15;
+  /* --color-secondary: #ffffff; */
+  --color-gray: #fefce8;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-btn-delete: #e95448;
+  --color-btn-update: #2e828e;
+  --fuente: "Inter", sans-serif;
+  --max-width: 1200px;
+}
+/*************************************************/
+/** Reset CSS ************************************/
+/*************************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  background-color: var(--color-gray);
+  font-family: var(--fuente);
+  color: var(--color-black);
+  font-size: 16px;
+}
+body {
+  /* display: flex;
+  flex-direction: column;
+  min-height: 100vh; */
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr auto; */
+}
+
+main {
+  /* PARA HACER QUE EL MAIN OCUPE TODO EL ESPACIO DEL BODY - FLEXBOX */
+  flex: 1;
+}
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 45px;
+}
+/*************************************************/
+/* Utilidades */
+/*************************************************/
+.container {
+  /* margin: auto;
+  max-width: var(--max-width); */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.none {
+  display: none;
+}
+.hidden {
+  visibility: hidden;
+}
+.button--user {
+}
+.button--modify {
+  background-color: var(--color-btn-update);
+}
+.button--delete {
+  background-color: var(--color-btn-delete);
+}
+.button--search {
+}
+.button--primary--form {
+  font-weight: bold;
+  background-color: var(--color-boton-aceptar);
+  border: none;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+}
+.button--secondary--form {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.button--reset--form {
+}
+/*************************************************/
+/* Estilos del sitio */
+/*************************************************/
+/*************************************************/
+/* GRID */
+/*************************************************/
+/* HEADER */
+/*************************************************/
+.header {
+  background-color: var(--color-secondary);
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.header--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header--title {
+  font-size: 2rem;
+}
+.logo {
+  width: 5rem;
+}
+/*************************************************/
+/* HEADER BUTTONS */
+/*************************************************/
+.header--buttons {
+  /* display: flex; */
+}
+button[class="btn--user"],
+button[class="btn--search"] {
+  border-radius: 50%;
+  border: 1px solid var(--color-black);
+  width: 40px;
+  height: 40px;
+}
+/*************************************************/
+/* SIDEBAR */
+/*************************************************/
+.sidebar {
+  background-color: var(--color-primary);
+}
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+.sidebar ul li a {
+  text-decoration: none;
+  color: var(--color-black);
+  font-size: 18px;
+}
+/*************************************************/
+/* MAIN */
+/*************************************************/
+.login {
+  display: flex;
+  align-items: center;
+}
+/*************************************************/
+/* FORM LOGIN */
+/*************************************************/
+.login--form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 30px;
+}
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.button--primary--form:hover {
+  border: 3px solid var(--color-boton-aceptar);
+}
+.button--secondary--form:hover {
+  font-weight: bold;
+  border-bottom: 3px solid var(--color-boton-aceptar);
+}
+/*************************************************/
+/* TABLE */
+/*************************************************/
+
+
+.table {
+  width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.table th,
+.table td {
+  padding: 5px 5px;
+}
+thead th {
+  background-color: var(--color-secondary);
+}
+tbody tr:nth-child(even) {
+  background-color: var(--color-secundario-alpha);
+}
+/*************************************************/
+/* FOOTER */
+/*************************************************/
+.footer {
+  background-color: var(--color-primary);
+  margin-top: auto;
+  height: 5vh;
+  /* centrar <p> */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer p {
+  font-size: 14px;
+}
+
+/*
+ * Mobil <= 480px
+ * Tablet <= 834px
+ * Desktop <= 1440px || <= 1200px
+ */
+

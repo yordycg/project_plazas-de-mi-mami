@@ -1,0 +1,53 @@
+/* Mobil <= 480px
+* Tablet <= 834px
+* Desktop <= 1440px || <= 1200px
+*/
+/****************/
+/* PAGES TABLET - bajo 834px */
+/****************/
+
+@media (max-width <=  834px) {
+.header {
+  max-height: 10vh;
+  max-width: 10vh;
+ }
+ .main {
+  max-width: 70vh;
+  max-height: 80vh;
+ }
+ .footer {
+  max-height: 10vh;
+ }
+ .sidebar {
+  max-width: 20vh;
+  max-height: 80vh;
+ }
+ .button--aside{
+  max-width: 15vh;
+ }
+}
+
+/****************/
+/* PAGES MOBILE - bajo 480px */
+/****************/
+
+@media (max-width <=  480px) {
+ .header {
+   max-height: 5vh;
+ }
+ .main {
+   max-width: 95vh;
+   max-height: 95vh;
+ }
+ .sidebar {
+   max-width: 5vh;
+   max-height: 90vh;
+ }
+ .footer {
+   max-height: 5vh;
+ }
+ .button--aside{
+  max-height: 15vh;
+ }
+}
+

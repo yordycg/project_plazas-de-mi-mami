@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!--ESTO ES PARA PRECARGAR LAS PAGINA-->
+    <link
+      rel="prerender"
+      href="../../-Proyecto_Ev-3/proyecto/assets/public/agregar_producto.html" />
+    <link
+      rel="prerender"
+      href="../../-Proyecto_Ev-3/proyecto/assets/public/agregar_proveedor.html" />
+    <link rel="prerender" href="../../-Proyecto_Ev-3/proyecto/assets/public/inventario.html" />
+    <link
+      rel="prerender"
+      href="../../-Proyecto_Ev-3/proyecto/assets/public/modificar_empleado.html" />
+    <link rel="prerender" href="../../-Proyecto_Ev-3/proyecto/assets/public/proveedores.html" />
+    <link
+      rel="prerender"
+      href="../../-Proyecto_Ev-3/proyecto/assets/private/agregar_empleado.html" />
+    <link rel="prerender" href="../../-Proyecto_Ev-3/proyecto/assets/private/empleados.html" />
+    <link rel="prerender" href="../../-Proyecto_Ev-3/proyecto/index_back.html" />
+    <!--------------------------------------------------------------------->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10, user-scalable=1" />
+    <!-- <meta http-equiv="refresh" content=";url=../../index.html">-->
+    <title>Agregar Proveedor | Piezas de Mi Mami</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet" />
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="../css/style.css" /> -->
+    <link rel="stylesheet" href="../css/test-grid.css" />
+    <link rel="stylesheet" href="assets/css/queries2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- ! HEADER ----------------------------------------------- -->
+
+      <header class="header">
+        <div class="header--container">
+          <div class="header--title">
+            <a href="../../index.html">
+              <img
+                class="logo"
+                src="../images/logo_plazas-de-mi-mami 2.ico"
+                alt="logo de inventario" />
+            </a>
+            <h1>Plazas de mi Mami</h1>
+          </div>
+          <div class="header--user">
+            <a href="../public/modificar_empleado.html">
+              <p>Admin</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- ! SIDEBAR ----------------------------------------------- -->
+      <aside class="sidebar">
+        <!-- ! Búsqueda solo por texto -->
+        <div class="sidebar--search">
+          <div class="container--row">
+            <button class="search--btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M10 18a7.95 7.95 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.95 7.95 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8m0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6" />
+              </svg>
+            </button>
+            <input
+              class="search--bar"
+              placeholder="Buscar un producto..."
+              autocomplete="off"
+              type="text" />
+        
+          </div>
+          <div class="search--result"></div>
+        </div>
+          <!-- TODO: productos o inventario? -->  
+          <div class="productos--container">
+            <a href="inventario.html" class="button--aside">
+                <img src="../images/icons/barcode.svg" alt="Icono de código de barras" />
+                <p>Inventario</p>
+            </a>
+        </div>
+        <div class="productos--container">
+          <a href="proveedores.html" class="button--aside">
+              <img src="../images/icons/proveedors.svg" alt="Icono de Proveedores" />
+              <p>Proveedores</p>
+          </a>
+      </div>
+      <div class="productos--container">
+        <a href="../private/empleados.html" class="button--aside">
+            <img src="../images/icons/empleado.svg" alt="Icono de Empleados" />
+            <p>Empleados</p>
+        </a>
+    </div>
+      </aside>
+
+      <!-- ! MAIN ----------------------------------------------- -->
+
+      <main class="main">
+        <h2>Agregar Proveedor</h2>
+        <form method="post">
+          <div class="form_agregar">
+            <label for="provider-name">Nombre del proveedor:</label>
+            <input id="provider-name" type="text" name="provider_name" />
+            <label for="provider-contact">Nombre del contacto:</label>
+            <input id="provider-contact" type="text" name="provider_contact" />
+            <label for="provider-phone">Teléfono:</label>
+            <input id="provider-phone" type="text" name="provider_phone" />
+            <label for="provider-email">Email:</label>
+            <input id="provider-email" type="text" name="provider_email" />
+            <label for="provider-address"> Dirección: </label>
+            <input id="provider-address" type="text" name="provider_address" />
+          </div>
+          <input type="reset" value="Limpiar" />
+          <button class="btn--agr--product">Agregar</button>
+        </form>
+      </main>
+
+      <!-- ! FOOTER ----------------------------------------------- -->
+
+      <footer class="footer">
+        <p>&copy; 2024 Plazas De Mi Mami</p>
+      </footer>
+    </div>
+  </body>
+</html>
