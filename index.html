@@ -5,25 +5,7 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10, user-scalable=1" />
-    <meta name="theme-color" content="#facc15" />
 
-    <!--ESTO ES PARA PRECARGAR LAS PAGINA-->
-    <link
-      rel="prerender"
-      href="../../-Proyecto_Ev-3/proyecto/assets/public/agregar_producto.html" />
-    <link
-      rel="prerender"
-      href="../../-Proyecto_Ev-3/proyecto/assets/public/agregar_proveedor.html" />
-    <link rel="prerender" href="../../-Proyecto_Ev-3/proyecto/assets/public/inventario.html" />
-    <link
-      rel="prerender"
-      href="../../-Proyecto_Ev-3/proyecto/assets/public/modificar_empleado.html" />
-    <link rel="prerender" href="../../-Proyecto_Ev-3/proyecto/assets/public/proveedores.html" />
-    <link
-      rel="prerender"
-      href="../../-Proyecto_Ev-3/proyecto/assets/private/agregar_empleado.html" />
-    <link rel="prerender" href="../../-Proyecto_Ev-3/proyecto/assets/private/empleados.html" />
-    <link rel="prerender" href="../../-Proyecto_Ev-3/proyecto/index_back.html" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,50 +16,115 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet" />
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/test-grid.css" />
-    <link rel="stylesheet" href="assets/css/queries.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Plazas De Mi Mami</title>
   </head>
   <body>
     <!-- ! ========== MAIN ========== -->
 
-    <div class="container no--sidebar no--header">
-      <main class="main--login">
-        <div class="container--login shadow--1">
-          <img
-            class="login--img"
-            src="assets/images/inventory.png"
-            alt="caricatura de una tienda e inventario" />
-          <form class="form--login" method="post">
+    <div class="container--login">
+      <main class="main--login--section">
+        <div class="login shadow--1">
+          <div class="login--img--box">
+            <img
+              class="login--img"
+              src="assets/images/inventory_example.jpg"
+              alt="caricatura de una tienda e inventario" />
+          </div>
+          <div class="login--form--box">
             <h1>Plazas de mi Mami</h1>
-            <h2>Bienvenido!</h2>
-            <label for="username" class="form--label">Usuario:</label>
-            <input
-              id="username"
-              class="form--input"
-              name="username"
-              type="text"
-              placeholder="admin10" />
-            <label for="password" class="form--label">Contraseña:</label>
-            <input
-              id="password"
-              class="form--input"
-              name="password"
-              type="password"
-              placeholder="*********" />
-            <button class="btn btn--primary btn--large" type="submit">Ingresar</button>
-            <!-- TODO: debemos crear otra vista o modal para cambiar la contraseña -->
-            <!-- <button class="btn btn--secondary btn--large">Cambiar contraseña</button> -->
-            <a href="#" class="btn btn--secondary btn--large">Cambiar contraseña</a>
-          </form>
+            <h2>Bienvenido</h2>
+            <form id="login--form" class="login--form" method="post">
+              <label for="username" class="form--label">Usuario:</label>
+              <input
+                id="username"
+                class="form--input radius--sm"
+                name="username"
+                type="text"
+                placeholder="admin10"
+                required />
+              <label for="password" class="form--label">Contraseña:</label>
+              <!-- TODO: agregar un icon-eye/button para mostrar o ocultar la password -->
+              <input
+                id="password"
+                class="form--input radius--sm"
+                name="password"
+                type="password"
+                placeholder="********"
+                required />
+              <button class="btn btn--full radius--sm" type="submit">Ingresar</button>
+              <!-- TODO: debemos crear otra vista o modal para cambiar la contraseña -->
+              <button id="btn--open--modal" class="btn btn--outline radius--sm">
+                Cambiar contraseña
+              </button>
+              <!-- <a href="#" id="btn--open--modal" class="btn btn--link btn--outline radius--sm">
+                Cambiar contraseña
+              </a> -->
+            </form>
+          </div>
         </div>
       </main>
 
+      <!-- ! ========== MODAL ========== -->
+
+      <!-- <div class="overlay hidden"></div> -->
+      <dialog id="modal--login" class="modal--login--section">
+        <header>
+          <button id="btn--close--modal" class="btn--icon--primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="lucide lucide-x">
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
+          </button>
+          <h2>Cambiar contraseña!</h2>
+        </header>
+        <form id="login--form--modal" class="login--form" method="post">
+          <label for="username--modal" class="form--label">Usuario:</label>
+          <input
+            id="username--modal"
+            class="form--input radius--sm"
+            name="username"
+            type="text"
+            placeholder="admin10"
+            required />
+          <label for="password--modal" class="form--label">Nueva Contraseña:</label>
+          <input
+            id="password--modal"
+            class="form--input radius--sm"
+            name="password"
+            type="password"
+            placeholder="********"
+            required />
+          <label for="password--confirm--modal" class="form--label"> Confirmar Contraseña: </label>
+          <input
+            id="password--confirm--modal"
+            class="form--input radius--sm"
+            name="password"
+            type="password"
+            placeholder="********"
+            required />
+          <button class="btn btn--full radius--sm" type="submit">Cambiar</button>
+          <!-- TODO: debemos crear otra vista o modal para cambiar la contraseña -->
+          <button class="btn btn--outline radius--sm" type="reset">Limpiar</button>
+        </form>
+      </dialog>
+
       <!-- ! ========== FOOTER ========== -->
 
-      <footer class="footer--login">
+      <footer class="footer--login--section">
         <p>&copy; 2024 Plazas De Mi Mami</p>
       </footer>
     </div>
+
+    <!-- ! ========== JS ========== -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
