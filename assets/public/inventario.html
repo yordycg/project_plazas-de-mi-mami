@@ -25,6 +25,10 @@
       content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10, user-scalable=1" />
     <!-- <meta http-equiv="refresh" content=";url=../../index.html">-->
     <title>Inventario | Plazas De Mi Mami</title>
+    <!-- CDN Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -56,22 +60,7 @@
           <div class="header--user">
             <a href="../public/modificar_empleado.html">
               <p>Admin</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-                <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
-              </svg>
+              <img src="../images/icons/user.svg" alt="Icono de un usuario" />
             </a>
           </div>
         </div>
@@ -94,29 +83,28 @@
               placeholder="Buscar un producto..."
               autocomplete="off"
               type="text" />
-        
           </div>
           <div class="search--result"></div>
         </div>
-          <!-- TODO: productos o inventario? -->  
-          <div class="productos--container">
-            <a href="inventario.html" class="button--aside">
-                <img src="../images/icons/barcode.svg" alt="Icono de código de barras" />
-                <p>Inventario</p>
-            </a>
+        <!-- TODO: productos o inventario? -->
+        <div class="productos--container">
+          <a href="inventario.html" class="button--aside">
+            <img src="../images/icons/barcode.svg" alt="Icono de código de barras" />
+            <p>Inventario</p>
+          </a>
         </div>
         <div class="productos--container">
           <a href="proveedores.html" class="button--aside">
-              <img src="../images/icons/proveedors.svg" alt="Icono de Proveedores" />
-              <p>Proveedores</p>
+            <img src="../images/icons/proveedors.svg" alt="Icono de Proveedores" />
+            <p>Proveedores</p>
           </a>
-      </div>
-      <div class="productos--container">
-        <a href="../private/empleados.html" class="button--aside">
+        </div>
+        <div class="productos--container">
+          <a href="../private/empleados.html" class="button--aside">
             <img src="../images/icons/empleado.svg" alt="Icono de Empleados" />
             <p>Empleados</p>
-        </a>
-    </div>
+          </a>
+        </div>
       </aside>
 
       <!-- ! MAIN ----------------------------------------------- -->
@@ -124,42 +112,57 @@
       <main class="main">
         <header>
           <!-- TODO: productos o inventario? -->
-          <h2>Productos</h2>
-          <button>Agregar producto</button>
-          <button>Eliminar producto(s)</button>
-          <!-- ! Búsqueda avanzada con filtros -->
-          <!-- debe estar oculto, y solo ser visible cuando se haga "click" en el botón "Buscar" -->
-          <div class="search-filters none">
-            <form method="post">
-              <label for="search-department">Departamento:</label>
-              <select id="search-department" name="department">
-                <option value="0">Tipo de departamento...</option>
-                <option value="Abarrotes">Abarrotes</option>
-                <option value="Lácteos">Lácteos</option>
-                <option value="Frutas">Frutas</option>
-                <option value="Verduras">Verduras</option>
-                <option value="Panadería">Panadería</option>
-                <option value="Congelados">Congelados</option>
-                <option value="Productos de limpieza">Productos de limpieza</option>
-              </select>
-              <label for="search-brand">Marca:</label>
-              <select id="search-brand" name="brand">
-                <option value="0">Tipo de marca ...</option>
-                <option value="Coca-Cola">Coca-Cola</option>
-                <option value="Colun">Colun</option>
-                <option value="Nescafe">Nescafe</option>
-                <option value="Soprole">Soprole</option>
-                <option value="Tucapel">Tucapel</option>
-              </select>
-              <label for="search-type-sale">Tipo de venta:</label>
-              <select id="search-type-sale" name="type-sale">
-                <option value="0">Tipo de venta ...</option>
-                <option value="Gramos">Gramos (g)</option>
-                <option value="Kilogramos">Kilogramos (kg)</option>
-                <option value="Unidad">Unidad (u)</option>
-                <option value="Litros">Litros (lt)</option>
-              </select>
-            </form>
+          <div class="main--header--container">
+            <div class="main--header--title--box">
+              <h2>Productos</h2>
+            </div>
+            <div class="main--header--actions--box">
+              <!-- <button>Agregar producto</button> -->
+              <a href="agregar_producto.html">
+                <img src="../images/icons/add_product.svg" alt="Icono agregar producto" />
+                <span>Agregar Producto</span>
+              </a>
+              <button>
+                <img src="../images/icons/trash.svg" alt="Icono de un basurero" />
+                <span>Eliminar Productos</span>
+              </button>
+            </div>
+            <!-- ! Búsqueda avanzada con filtros -->
+            <!-- debe estar oculto, y solo ser visible cuando se haga "click" en el botón "Buscar" -->
+            <div class="main--header--search--box">
+              <search>
+                <form method="post">
+                  <label for="search-department">Departamento:</label>
+                  <select id="search-department" name="department">
+                    <option value="0">Tipo de departamento...</option>
+                    <option value="Abarrotes">Abarrotes</option>
+                    <option value="Lácteos">Lácteos</option>
+                    <option value="Frutas">Frutas</option>
+                    <option value="Verduras">Verduras</option>
+                    <option value="Panadería">Panadería</option>
+                    <option value="Congelados">Congelados</option>
+                    <option value="Productos de limpieza">Productos de limpieza</option>
+                  </select>
+                  <label for="search-brand">Marca:</label>
+                  <select id="search-brand" name="brand">
+                    <option value="0">Tipo de marca ...</option>
+                    <option value="Coca-Cola">Coca-Cola</option>
+                    <option value="Colun">Colun</option>
+                    <option value="Nescafe">Nescafe</option>
+                    <option value="Soprole">Soprole</option>
+                    <option value="Tucapel">Tucapel</option>
+                  </select>
+                  <label for="search-type-sale">Tipo de venta:</label>
+                  <select id="search-type-sale" name="type-sale">
+                    <option value="0">Tipo de venta ...</option>
+                    <option value="Gramos">Gramos (g)</option>
+                    <option value="Kilogramos">Kilogramos (kg)</option>
+                    <option value="Unidad">Unidad (u)</option>
+                    <option value="Litros">Litros (lt)</option>
+                  </select>
+                </form>
+              </search>
+            </div>
           </div>
         </header>
         <!-- ! Tabla de Productos-->
@@ -175,7 +178,7 @@
               <th>Precio Venta</th>
               <th>Costo</th>
               <th>Inventario</th>
-              <th>Inv. Mínimo</th>
+              <th>Inventario Mínimo</th>
               <th>Acciones</th>
             </tr>
           </thead>
@@ -194,8 +197,12 @@
               <td>20</td>
               <td>5</td>
               <td>
-                <button class="btn btn--delete btn--small">Modificar</button>
-                <button class="btn btn--update btn--small">Eliminar</button>
+                <button class="btn--icon btn--update">
+                  <img
+                    src="../images/icons/pencil_square.svg"
+                    alt="Icono de un lapiz para editar" />
+                </button>
+                <button class="btn--icon"></button>
               </td>
             </tr>
             <tr>

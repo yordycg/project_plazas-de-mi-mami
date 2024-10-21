@@ -35,7 +35,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../css/test-grid.css" />
     <link rel="stylesheet" href="../css/queries.css" />
-    <link rel="stylesheet" href="assets/css/queries2.css" />
+    <link rel="stylesheet" href="../css/queries2.css" />
     <title>Agregar Producto| Piezas de Mi Mami</title>
   </head>
   <body>
@@ -81,36 +81,40 @@
 
       <aside class="sidebar">
         <!-- ! Búsqueda solo por texto -->
-        <div class="productos--container">
-          <form class="container--row">
+        <div class="sidebar--search">
+          <div class="container--row">
             <button class="search--btn">
-              <img src="../images/icons/search-svgrepo-com.svg" alt="Icono de una lupa" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M10 18a7.95 7.95 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.95 7.95 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8m0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6" />
+              </svg>
             </button>
             <input
               class="search--bar"
               placeholder="Buscar un producto..."
               autocomplete="off"
               type="text" />
-          </form>
+          </div>
           <div class="search--result"></div>
         </div>
         <!-- TODO: productos o inventario? -->
         <div class="productos--container">
           <a href="inventario.html" class="button--aside">
             <img src="../images/icons/barcode.svg" alt="Icono de código de barras" />
-            <p>Inventario</p>
+            <p class="p--sidebar">Inventario</p>
           </a>
         </div>
         <div class="productos--container">
           <a href="proveedores.html" class="button--aside">
             <img src="../images/icons/proveedors.svg" alt="Icono de Proveedores" />
-            <p>Proveedores</p>
+            <p class="p--sidebar">Proveedores</p>
           </a>
         </div>
         <div class="productos--container">
           <a href="../private/empleados.html" class="button--aside">
             <img src="../images/icons/empleado.svg" alt="Icono de Empleados" />
-            <p>Empleados</p>
+            <p class="p--sidebar">Empleados</p>
           </a>
         </div>
       </aside>
@@ -159,9 +163,11 @@
             <input id="product-amount" type="number" name="product_amount" />
             <label for="product-min-amount">Cantidad minima:</label>
             <input id="product-min-amount" type="number" name="product_min_amount" />
-          </div>
+        </div>
+          <div class="btn--agr--eli">
           <input type="reset" value="Limpiar" />
           <button class="btn--agr--product">Agregar</button>
+        </div>
         </form>
       </main>
 
