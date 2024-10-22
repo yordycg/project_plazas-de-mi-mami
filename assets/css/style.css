@@ -81,8 +81,7 @@ body {
 img,
 picture,
 video,
-canvas,
-svg {
+canvas {
   display: block;
   max-width: 100%;
 }
@@ -133,7 +132,7 @@ h2 {
 .container--grid {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: 280px 1fr;
   grid-template-rows: 80px auto 40px;
   grid-template-areas:
     "header header"
@@ -361,6 +360,60 @@ dialog::backdrop {
   background-color: var(--primary-color);
   padding: 2rem;
 }
+/* SEARCH SECTION -------------------------------------- */
+.search {
+  margin: 0 0 1.6rem 0;
+
+  position: relative;
+}
+.search--bar {
+  width: 100%;
+  height: 3rem;
+  padding: 0.8rem 3.6rem;
+  font-size: 1.6rem;
+  border: solid 0.1rem var(--white-color);
+  border-radius: 0.8rem;
+}
+.search--icon {
+  padding-left: 1.2rem;
+
+  cursor: pointer;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.btn--search {
+  position: absolute;
+
+  cursor: pointer;
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+/* NAVBAR SECTION -------------------------------------- */
+.nav--main--list {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.nav--main--link:link,
+.nav--main--link:visited {
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
 /* MAIN **************************/
 .main--section {
   grid-area: main;
