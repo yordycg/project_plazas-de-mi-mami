@@ -31,9 +31,9 @@
   2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
 
-/*****************/
+/*------------------------------------------------------------------------------------------------*/
 /* VARIABLES CSS */
-/*****************/
+/*------------------------------------------------------------------------------------------------*/
 
 :root {
   --max-width-desktop: 1200px;
@@ -44,6 +44,7 @@
   --tint--10--color: #2b5382;
   --tint--20--color: #426690;
   --gray-color: #d0d9e3;
+  --gray--tint--30--color: #d0d9e330;
   --black-color: #0b0b0b;
   --white-color: #fbfbfb;
   --error-color: #f54135;
@@ -53,9 +54,9 @@
   /*----- TYPOGRAPHY -----*/
 }
 
-/*************/
+/*------------------------------------------------------------------------------------------------*/
 /* RESET CSS */
-/*************/
+/*------------------------------------------------------------------------------------------------*/
 
 *,
 *::before,
@@ -105,9 +106,9 @@ h2 {
   /* margin-bottom: 2rem; */
 }
 
-/*************/
+/*------------------------------------------------------------------------------------------------*/
 /* UTILITIES */
-/*************/
+/*------------------------------------------------------------------------------------------------*/
 .shadow--1 {
   box-shadow: var(--shadow-color) 0px 54px 55px, var(--shadow-color) 0px -12px 30px,
     var(--shadow-color) 0px 4px 6px, var(--shadow-color) 0px 12px 13px,
@@ -144,9 +145,26 @@ h2 {
   align-items: center;
   gap: 1.2rem;
 }
-/**************/
+.status {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border-radius: 1rem;
+}
+.status.equal {
+  background-color: #fba01820;
+  color: var(--warning-color);
+}
+.status.minimum {
+  background-color: #f5413520;
+  color: var(--error-color);
+}
+.status.maximum {
+  background-color: #38ce4720;
+  color: var(--success-color);
+}
+/*------------------------------------------------------------------------------------------------*/
 /* COMPONENTS */
-/**************/
+/*------------------------------------------------------------------------------------------------*/
 .btn {
   cursor: pointer;
   transition: all 0.3s ease;
@@ -206,11 +224,13 @@ h2 {
   padding: 1rem 2rem;
   font-size: 1.6rem;
 }
-/**************/
-/* CUSTOM CSS */
-/**************/
 
-/* LOGIN ********************/
+/*------------------------------------------------------------------------------------------------*/
+/* CUSTOM CSS */
+/*------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+/* LOGIN */
+/*------------------------------------------------------------------------------------------------*/
 .container--login {
   display: grid;
   grid-template-columns: 1fr;
@@ -253,7 +273,7 @@ h2 {
   object-fit: cover;
   object-position: center;
 }
-/* Style FORM login *****************************/
+/* LOGIN FORM ------------------------------------------------------------------------------------*/
 .login--form--box {
   display: flex;
   flex-direction: column;
@@ -284,7 +304,7 @@ h2 {
   outline: var(--primary-color);
 }
 
-/* Style MODAL login *****************************/
+/* LOGIN MODAL -----------------------------------------------------------------------------------*/
 .modal--login--section {
   position: fixed;
   top: 50%;
@@ -322,7 +342,9 @@ dialog::backdrop {
   width: 100%;
 }
 
-/* HEADER ************************/
+/*------------------------------------------------------------------------------------------------*/
+/* HEADER */
+/*------------------------------------------------------------------------------------------------*/
 .header--section {
   grid-area: header;
 
@@ -353,14 +375,16 @@ dialog::backdrop {
 .header--user--box p {
   font-size: 1.6rem;
 }
-/* SIDEBAR ***********************/
+/*------------------------------------------------------------------------------------------------*/
+/* SIDEBAR */
+/*------------------------------------------------------------------------------------------------*/
 .sidebar--section {
   grid-area: sidebar;
 
   background-color: var(--primary-color);
   padding: 2rem;
 }
-/* SEARCH SECTION -------------------------------------- */
+/* SEARCH ----------------------------------------------------------------------------------------*/
 .search {
   margin: 0 0 1.6rem 0;
 
@@ -415,29 +439,45 @@ dialog::backdrop {
   margin: 0;
   padding: 0;
 }
-/* NAVBAR SECTION -------------------------------------- */
+/*------------------------------------------------------------------------------------------------*/
+/* NAVBAR */
+/*------------------------------------------------------------------------------------------------*/
 .nav--main--list {
   list-style: none;
-
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 2.4rem;
+}
+.nav--main--list li {
+  padding: 0.45rem 0.8rem;
+  border-radius: 0.9rem;
+}
+.nav--main--list li:hover,
+.nav--main--list li:active {
+  background-color: var(--shade--10--color);
+  box-shadow: inset 0 0 0 0.1rem var(--white-color);
 }
 .nav--main--link:link,
 .nav--main--link:visited {
   color: var(--white-color);
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
-/* MAIN **************************/
+/*------------------------------------------------------------------------------------------------*/
+/* MAIN */
+/*------------------------------------------------------------------------------------------------*/
 .main--section {
   grid-area: main;
 
   padding: 2rem;
+  max-width: 140rem;
+  margin: 0 auto;
 }
-/* MAIN HEADER ------------------------------- */
+/* MAIN HEADER -----------------------------------------------------------------------------------*/
 .main--section header {
   margin-bottom: 3.6rem;
   background-color: var(--white-color);
@@ -449,7 +489,7 @@ dialog::backdrop {
   text-align: center;
   margin-bottom: 2.4rem;
 }
-/* MAIN HEADER SEARCH ------------------------------- */
+/* SEARCH FILTER ---------------------------------------------------------------------------------*/
 .main--section form {
   font-size: 1.6rem;
   display: flex;
@@ -461,7 +501,39 @@ dialog::backdrop {
   width: 20rem;
   height: 2.4rem;
 }
-/* FOOTER ************************/
+/* TABLE -----------------------------------------------------------------------------------------*/
+.table {
+  width: 100%;
+  max-width: 140rem;
+  margin: 0 auto;
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  font-size: 1.6rem;
+}
+th,
+td:not(.name--product) {
+  padding: 1rem;
+  text-align: center;
+}
+.table thead th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: var(--shade--10--color);
+  color: var(--white-color);
+}
+/* color de fondo en todas las filas impares */
+tbody tr:nth-child(even) {
+  background-color: #b8c6d5;
+}
+tbody tr:hover {
+  background-color: #fbfbfb90;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/* FOOTER */
+/*------------------------------------------------------------------------------------------------*/
 /* footer login and others footers */
 .footer--login--section,
 .footer--section {

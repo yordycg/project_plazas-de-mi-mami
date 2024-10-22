@@ -220,97 +220,108 @@
 
         <!-- ----------- TABLA INVENTARIO ----------- -->
 
-        <table class="table">
-          <thead>
-            <tr>
-              <th>-</th>
-              <th>ID</th>
-              <th>Nombre de producto</th>
-              <th>Departamento</th>
-              <th>Tipo Venta</th>
-              <th>Marca</th>
-              <th>Precio Venta</th>
-              <th>Costo</th>
-              <th>Inventario</th>
-              <th>Inv. Mínimo</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <input type="checkbox" name="provider_id" value="1" />
-              </td>
-              <td>1</td>
-              <td>Arroz 1kg.</td>
-              <td>Abarrotes</td>
-              <td>Unidad</td>
-              <td>...</td>
-              <td>$ 1.500</td>
-              <td>$ 1.200</td>
-              <td>20</td>
-              <td>5</td>
-              <td>
-                <button class="btn btn--delete btn--small">Modificar</button>
-                <button class="btn btn--update btn--small">Eliminar</button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input type="checkbox" name="provider_id" value="2" />
-              </td>
-              <td>2</td>
-              <td>Fideos 500 g.</td>
-              <td>Abarrotes</td>
-              <td>Unidad</td>
-              <td>...</td>
-              <td>$ 800</td>
-              <td>$ 600</td>
-              <td>15</td>
-              <td>5</td>
-              <td>
-                <button>Modificar</button>
-                <button>Eliminar</button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input type="checkbox" name="provider_id" value="3" />
-              </td>
-              <td>3</td>
-              <td>Leche 1 lt.</td>
-              <td>Lácteos</td>
-              <td>Unidad</td>
-              <td>...</td>
-              <td>$ 2.000</td>
-              <td>$ 1.700</td>
-              <td>10</td>
-              <td>5</td>
-              <td>
-                <button class="open-modal">Modificar</button>
-                <button>Eliminar</button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input type="checkbox" name="provider_id" value="4" />
-              </td>
-              <td>4</td>
-              <td>Pan 1kg.</td>
-              <td>Panadería</td>
-              <td>Kilogramos</td>
-              <td>...</td>
-              <td>$ 2.500</td>
-              <td>$ 2.000</td>
-              <td>30</td>
-              <td>5</td>
-              <td>
-                <button class="open-modal">Modificar</button>
-                <button>Eliminar</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <!-- TODO: hacer que las 2 primeras columnas (check y ID) se hagan mas delgadas -->
+        <!-- TODO: trabajar los media queries -->
+
+        <section class="table--section">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>-</th>
+                <th>ID</th>
+                <th>Nombre de producto</th>
+                <th>Departamento</th>
+                <th>Tipo Venta</th>
+                <th>Marca</th>
+                <th>Precio Venta</th>
+                <th>Costo</th>
+                <th>Inventario</th>
+                <th>Inv. Mínimo</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input type="checkbox" name="provider_id" value="1" />
+                </td>
+                <td>1</td>
+                <td class="name--product"><strong>Arroz 1kg.</strong></td>
+                <td>Abarrotes</td>
+                <td>Unidad</td>
+                <td>...</td>
+                <td>$ 1.500</td>
+                <td>$ 1.200</td>
+                <td>
+                  <p class="status equal">5</p>
+                </td>
+                <td>5</td>
+                <td>
+                  <button class="btn btn--delete btn--small">Modificar</button>
+                  <button class="btn btn--update btn--small">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" name="provider_id" value="2" />
+                </td>
+                <td>2</td>
+                <td class="name--product"><strong>Fideos 500 g.</strong></td>
+                <td>Abarrotes</td>
+                <td>Unidad</td>
+                <td>...</td>
+                <td>$ 800</td>
+                <td>$ 600</td>
+                <td>
+                  <p class="status minimum">3</p>
+                </td>
+                <td>5</td>
+                <td>
+                  <button>Modificar</button>
+                  <button>Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" name="provider_id" value="3" />
+                </td>
+                <td>3</td>
+                <td class="name--product"><strong>Leche 1 lt.</strong></td>
+                <td>Lácteos</td>
+                <td>Unidad</td>
+                <td>...</td>
+                <td>$ 2.000</td>
+                <td>$ 1.700</td>
+                <td>
+                  <p class="status maximum">10</p>
+                </td>
+                <td>5</td>
+                <td>
+                  <button class="open-modal">Modificar</button>
+                  <button>Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" name="provider_id" value="4" />
+                </td>
+                <td>4</td>
+                <td class="name--product"><strong>Pan 1kg.</strong></td>
+                <td>Panadería</td>
+                <td>Kilogramos</td>
+                <td>...</td>
+                <td>$ 2.500</td>
+                <td>$ 2.000</td>
+                <td>30</td>
+                <td>5</td>
+                <td>
+                  <button class="open-modal">Modificar</button>
+                  <button>Eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
 
         <!-- ----------- MODAL: MODIFICAR PRODUCTO ----------- -->
 
