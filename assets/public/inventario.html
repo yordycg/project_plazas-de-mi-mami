@@ -1,30 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <!--ESTO ES PARA PRECARGAR LAS PAGINA-->
-    <link
-      rel="prerender"
-      href="../../-Proyecto_Ev-3/proyecto/assets/public/agregar_producto.html" />
-    <link
-      rel="prerender"
-      href="../../-Proyecto_Ev-3/proyecto/assets/public/agregar_proveedor.html" />
-    <link rel="prerender" href="../../-Proyecto_Ev-3/proyecto/assets/public/inventario.html" />
-    <link
-      rel="prerender"
-      href="../../-Proyecto_Ev-3/proyecto/assets/public/modificar_empleado.html" />
-    <link rel="prerender" href="../../-Proyecto_Ev-3/proyecto/assets/public/proveedores.html" />
-    <link
-      rel="prerender"
-      href="../../-Proyecto_Ev-3/proyecto/assets/private/agregar_empleado.html" />
-    <link rel="prerender" href="../../-Proyecto_Ev-3/proyecto/assets/private/empleados.html" />
-    <link rel="prerender" href="../../-Proyecto_Ev-3/proyecto/index_back.html" />
-    <!--------------------------------------------------------------------->
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10, user-scalable=1" />
-    <!-- <meta http-equiv="refresh" content=";url=../../index.html">-->
-    <title>Inventario | Plazas De Mi Mami</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,46 +13,50 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet" />
+
     <!-- CSS -->
-    <!-- <link rel="stylesheet" href="../css/style.css" /> -->
-    <link rel="stylesheet" href="../css/test-grid.css" />
-    <link rel="stylesheet" href="assets/css/queries2.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Inventario | Plazas De Mi Mami</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container--grid">
       <!-- ! HEADER ----------------------------------------------- -->
-      <header class="header">
-        <div class="header--container">
-          <div class="header--title">
-            <a href="../../index.html">
-              <img
-                class="logo"
-                src="../images/logo_plazas-de-mi-mami 2.ico"
-                alt="logo de inventario" />
-            </a>
-            <h1>Plazas de mi Mami</h1>
-          </div>
-          <div class="header--user">
-            <a href="../public/modificar_empleado.html">
-              <p>Admin</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-                <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
-              </svg>
-            </a>
-          </div>
+      <header class="header--section">
+        <div class="header--link--box">
+          <a class="center--row" href="../../index.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              fill="currentColor"
+              class="bi bi-shop"
+              viewBox="0 0 16 16">
+              <path
+                d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z" />
+            </svg>
+            <span>Plazas de mi Mami</span>
+          </a>
+        </div>
+        <div class="header--user--box">
+          <a class="center--row" href="../public/modificar_empleado.html">
+            <p>Admin</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+              <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+              <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+            </svg>
+          </a>
         </div>
       </header>
 
@@ -94,29 +77,28 @@
               placeholder="Buscar un producto..."
               autocomplete="off"
               type="text" />
-        
           </div>
           <div class="search--result"></div>
         </div>
-          <!-- TODO: productos o inventario? -->  
-          <div class="productos--container">
-            <a href="inventario.html" class="button--aside">
-                <img src="../images/icons/barcode.svg" alt="Icono de código de barras" />
-                <p>Inventario</p>
-            </a>
+        <!-- TODO: productos o inventario? -->
+        <div class="productos--container">
+          <a href="inventario.html" class="button--aside">
+            <img src="../images/icons/barcode.svg" alt="Icono de código de barras" />
+            <p>Inventario</p>
+          </a>
         </div>
         <div class="productos--container">
           <a href="proveedores.html" class="button--aside">
-              <img src="../images/icons/proveedors.svg" alt="Icono de Proveedores" />
-              <p>Proveedores</p>
+            <img src="../images/icons/proveedors.svg" alt="Icono de Proveedores" />
+            <p>Proveedores</p>
           </a>
-      </div>
-      <div class="productos--container">
-        <a href="../private/empleados.html" class="button--aside">
+        </div>
+        <div class="productos--container">
+          <a href="../private/empleados.html" class="button--aside">
             <img src="../images/icons/empleado.svg" alt="Icono de Empleados" />
             <p>Empleados</p>
-        </a>
-    </div>
+          </a>
+        </div>
       </aside>
 
       <!-- ! MAIN ----------------------------------------------- -->
