@@ -31,28 +31,38 @@
               alt="caricatura de una tienda e inventario" />
           </div>
           <div class="login--form--box">
-            <h1>Plazas de mi Mami</h1>
+            <h1 class="title">Plazas de mi Mami</h1>
             <h2>Bienvenido</h2>
             <form id="login--form" class="login--form" method="post">
-              <label for="usernameLogin" class="form--label">Usuario:</label>
-              <input
-                id="usernameLogin"
-                class="form--input radius--sm"
-                name="usernameLogin"
-                type="text"
-                placeholder="admin10"
-                required />
-              <label for="passwordLogin" class="form--label">Contraseña:</label>
-              <!-- TODO: agregar un icon-eye/button para mostrar o ocultar la password -->
-              <input
-                id="passwordLogin"
-                class="form--input radius--sm"
-                name="passwordLogin"
-                type="password"
-                placeholder="********"
-                required />
-              <button class="btn btn--full radius--sm" type="submit">Ingresar</button>
-              <button id="btn--open--modal" class="btn btn--outline radius--sm">
+              <fieldset>
+                <div class="input--box">
+                  <label for="usernameLogin" class="form--label">Usuario</label>
+                  <input
+                    id="usernameLogin"
+                    class="form--input"
+                    name="usernameLogin"
+                    type="text"
+                    placeholder="admin"
+                    required />
+                </div>
+                <div class="input--box">
+                  <label for="passwordLogin" class="form--label">Contraseña</label>
+                  <!-- TODO: agregar un icon-eye/button para mostrar o ocultar la password -->
+                  <input
+                    id="passwordLogin"
+                    class="form--input"
+                    name="passwordLogin"
+                    type="password"
+                    placeholder="********"
+                    required />
+                </div>
+              </fieldset>
+              <button
+                class="btn btn--full btn--primary radius--sm margin--bottom--md"
+                type="submit">
+                Ingresar
+              </button>
+              <button id="btn--open--modal" class="btn btn--full btn--outline radius--sm">
                 Cambiar contraseña
               </button>
             </form>
@@ -81,7 +91,7 @@
           <h2>Cambiar contraseña!</h2>
         </header>
         <form id="login--form--modal" class="login--form" method="post">
-          <label for="username--modal" class="form--label">Usuario:</label>
+          <label for="username--modal" class="form--label">Usuario</label>
           <input
             id="username--modal"
             class="form--input radius--sm"
@@ -89,7 +99,7 @@
             type="text"
             placeholder="admin10"
             required />
-          <label for="password--modal" class="form--label">Nueva Contraseña:</label>
+          <label for="password--modal" class="form--label">Nueva Contraseña</label>
           <input
             id="password--modal"
             class="form--input radius--sm"
@@ -97,7 +107,7 @@
             type="password"
             placeholder="********"
             required />
-          <label for="password--confirm--modal" class="form--label"> Confirmar Contraseña: </label>
+          <label for="password--confirm--modal" class="form--label">Confirmar Contraseña</label>
           <input
             id="password--confirm--modal"
             class="form--input radius--sm"

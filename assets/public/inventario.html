@@ -14,6 +14,11 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet" />
 
+    <!-- ----------- CDN BOOTSTRAP ----------- -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
     <!-- CSS -->
     <!-- ----------- GOOGLE FONTS ----------- -->
     <link rel="stylesheet" href="../css/style.css" />
@@ -25,7 +30,7 @@
 
       <header class="header--section">
         <div class="header--link--box">
-          <a class="center--row" href="../../index.html">
+          <a class="center--row gap--4" href="../../index.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="48"
@@ -40,7 +45,7 @@
           </a>
         </div>
         <div class="header--user--box">
-          <a class="center--row" href="../public/modificar_empleado.html">
+          <a class="center--row gap--4" href="../public/modificar_empleado.html">
             <p>Admin</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -65,6 +70,7 @@
       <!-- ----------- SIDEBAR ----------- -->
 
       <aside class="sidebar--section">
+        <hr />
         <search class="search container--row">
           <input class="search--bar" placeholder="Leche ..." autocomplete="off" type="text" />
           <div class="search--icon">
@@ -114,12 +120,14 @@
           </a>
         </div> -->
 
+        <hr />
+
         <!-- ----------- NAVBAR ----------- -->
 
         <nav class="nav--main">
           <ul class="nav--main--list">
             <li>
-              <a class="nav--main--link center--row" href="#">
+              <a class="nav--main--link center--row gap--4" href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -136,7 +144,7 @@
               </a>
             </li>
             <li>
-              <a class="nav--main--link center--row" href="#">
+              <a class="nav--main--link center--row gap--4" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                   <path
                     fill="currentColor"
@@ -146,7 +154,7 @@
               </a>
             </li>
             <li>
-              <a class="nav--main--link center--row" href="#">
+              <a class="nav--main--link center--row gap--4" href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -258,31 +266,10 @@
                 <td>5</td>
                 <td>
                   <button class="btn btn--update btn--icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-pencil-square"
-                      viewBox="0 0 16 16">
-                      <path
-                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                      <path
-                        fill-rule="evenodd"
-                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
-                    </svg>
+                    <i class="bi bi-pencil-square"></i>
                   </button>
                   <button class="btn btn--delete btn--icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-trash3"
-                      viewBox="0 0 16 16">
-                      <path
-                        d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
-                    </svg>
+                    <i class="bi bi-trash3-fill"></i>
                   </button>
                 </td>
               </tr>
@@ -303,33 +290,11 @@
                 <td>5</td>
                 <td>
                   <button class="btn btn--update btn--icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-pencil-square"
-                      viewBox="0 0 16 16">
-                      <path
-                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                      <path
-                        fill-rule="evenodd"
-                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
-                    </svg>
+                    <i class="bi bi-pencil-square"></i>
                   </button>
                   <button class="btn btn--delete btn--icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-trash3"
-                      viewBox="0 0 16 16">
-                      <path
-                        d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
-                    </svg>
+                    <i class="bi bi-trash3-fill"></i>
                   </button>
-
                 </td>
               </tr>
               <tr>
@@ -344,12 +309,16 @@
                 <td>$ 2.000</td>
                 <td>$ 1.700</td>
                 <td>
-                  <p class="status maximum">10</p>
+                  <p>10</p>
                 </td>
                 <td>5</td>
                 <td>
-                  <button class="open-modal">Modificar</button>
-                  <button>Eliminar</button>
+                  <button class="btn btn--update btn--icon">
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+                  <button class="btn btn--delete btn--icon">
+                    <i class="bi bi-trash3-fill"></i>
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -363,11 +332,17 @@
                 <td>...</td>
                 <td>$ 2.500</td>
                 <td>$ 2.000</td>
-                <td>30</td>
+                <td>
+                  <p>10</p>
+                </td>
                 <td>5</td>
                 <td>
-                  <button class="open-modal">Modificar</button>
-                  <button>Eliminar</button>
+                  <button class="btn btn--update btn--icon">
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+                  <button class="btn btn--delete btn--icon">
+                    <i class="bi bi-trash3-fill"></i>
+                  </button>
                 </td>
               </tr>
             </tbody>
