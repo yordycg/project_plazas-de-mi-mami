@@ -614,11 +614,19 @@ tbody tr:hover {
 }
 /* FORM ADD, UPDATE ------------------------------------------------------------------------------*/
 .form--add--product {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: repeat(6, 1fr);
+  column-gap: 2.4rem;
+
   max-width: 80rem;
   margin: 0 auto;
 }
 .form--add--product .input--box {
-  grid-column: span 2 / span 2;
+  grid-column: span 3 / span 3;
+}
+.form--add--product .input--box:not(:first-child) {
+  /* grid-row: 2; */
 }
 
 /*------------------------------------------------------------------------------------------------*/

@@ -153,11 +153,32 @@
         <header>
           <h1 class="title">Agregar Producto</h1>
         </header>
-        <form class="form--add--product grid grid--4--cols gap--4" method="post">
+        <form class="form--add--product" method="post">
           <div class="input--box">
             <label for="product-name" class="form--label">Nombre del producto</label>
             <input id="product-name" class="form--input" type="text" name="product_name" />
           </div>
+          <div class="input--box">
+            <label for="product-sale" class="form--label">Precio de venta</label>
+            <input id="product-sale" class="form--input" type="number" name="product_sale" />
+          </div>
+          <div class="input--box">
+            <label for="product-cost" class="form--label">Costo del producto</label>
+            <input id="product-cost" class="form--input" type="number" name="product_cost" />
+          </div>
+          <div class="input--box">
+            <label for="product-amount" class="form--label">Cantidad</label>
+            <input id="product-amount" class="form--input" type="number" name="product_amount" />
+          </div>
+          <div class="input--box">
+            <label for="product-min-amount" class="form--label">Cantidad minima</label>
+            <input
+              id="product-min-amount"
+              class="form--input"
+              type="number"
+              name="product_min_amount" />
+          </div>
+
           <div class="input--box">
             <label for="product_department" class="form--label">Departamento</label>
             <select id="product-department" class="form--input" name="product_department">
@@ -193,32 +214,12 @@
             </select>
           </div>
           <div class="input--box">
-            <label for="product-sale" class="form--label">Precio de venta</label>
-            <input id="product-sale" class="form--input" type="number" name="product_sale" />
-          </div>
-          <div class="input--box">
-            <label for="product-cost" class="form--label">Costo del producto</label>
-            <input id="product-cost" class="form--input" type="number" name="product_cost" />
-          </div>
-          <div class="input--box">
-            <label for="product-amount" class="form--label">Cantidad</label>
-            <input id="product-amount" class="form--input" type="number" name="product_amount" />
-          </div>
-          <div class="input--box">
-            <label for="product-min-amount" class="form--label">Cantidad minima</label>
-            <input
-              id="product-min-amount"
-              class="form--input"
-              type="number"
-              name="product_min_amount" />
-          </div>
-          <div class="input--box">
             <!-- TODO: agregar icono para limipiar -->
-            <input type="reset" class="btn btn--full" value="Limpiar" />
+            <input type="reset" class="btn" value="Limpiar" />
           </div>
           <div class="input--box">
             <!-- TODO: agregar icono para agregar usuario -->
-            <button class="btn btn--full btn--agr--product">Agregar</button>
+            <button class="btn btn--agr--product">Agregar</button>
           </div>
         </form>
       </main>
