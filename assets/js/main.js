@@ -18,7 +18,7 @@ formLogin.addEventListener("submit", (event) => {
 
   // validar los datos con una cuenta de usuario "falsa"
   if (usernameLogin == "admin" && passwordLogin == "1234") {
-    window.location.href = "../assets/public/inventario.html";
+    window.location.href = "../assets/public/productos.html";
   } else {
     alert("Datos ingresados con corresponden!");
   }

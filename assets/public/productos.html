@@ -192,7 +192,7 @@
         <nav class="nav--main">
           <ul class="nav--main--list">
             <li>
-              <a class="nav--main--link center--row gap--4" href="../public/inventario.html">
+              <a class="nav--main--link center--row gap--4" href="../public/productos.html">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -205,7 +205,7 @@
                   <path
                     d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zM10 8a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zm-6 4a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm4-3a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0v-3a1 1 0 0 1 1-1" />
                 </svg>
-                <span>Inventario</span>
+                <span>Productos</span>
               </a>
             </li>
             <li>
@@ -243,39 +243,51 @@
         <header>
           <h1 class="title">Productos</h1>
           <div class="search--filters">
-            <form method="post">
-              <!-- <label for="search-department">Departamento:</label> -->
-              <select id="search-department" class="form--input" name="department">
-                <option value="0" disabled selected>Departamento</option>
-                <option value="Abarrotes">Abarrotes</option>
-                <option value="Lácteos">Lácteos</option>
-                <option value="Frutas">Frutas</option>
-                <option value="Verduras">Verduras</option>
-                <option value="Panadería">Panadería</option>
-                <option value="Congelados">Congelados</option>
-                <option value="Productos de limpieza">Productos de limpieza</option>
-              </select>
-              <!-- <label for="search-brand">Marca:</label> -->
-              <select id="search-brand" name="brand">
-                <option value="0" disabled selected>Marca</option>
-                <option value="Coca-Cola">Coca-Cola</option>
-                <option value="Colun">Colun</option>
-                <option value="Nescafe">Nescafe</option>
-                <option value="Soprole">Soprole</option>
-                <option value="Tucapel">Tucapel</option>
-              </select>
-              <!-- <label for="search-type-sale">Tipo de venta:</label> -->
-              <select id="search-type-sale" name="type-sale">
-                <option value="0" disabled selected>Tipo de venta</option>
-                <option value="Gramos">Gramos (g)</option>
-                <option value="Kilogramos">Kilogramos (kg)</option>
-                <option value="Unidad">Unidad (u)</option>
-                <option value="Litros">Litros (lt)</option>
-              </select>
-              <button class="btn btn--primary radius--sm" type="submit">
-                <i class="bi bi-funnel-fill mr--4"></i>
-                <span>Filtrar Búsqueda</span>
-              </button>
+            <div class="search--form--box">
+              <form method="post">
+                <div class="input--box">
+                  <!-- <label for="search-department">Departamento:</label> -->
+                  <select id="search-department" class="form--input" name="department">
+                    <option value="0" disabled selected>Departamento</option>
+                    <option value="Abarrotes">Abarrotes</option>
+                    <option value="Lácteos">Lácteos</option>
+                    <option value="Frutas">Frutas</option>
+                    <option value="Verduras">Verduras</option>
+                    <option value="Panadería">Panadería</option>
+                    <option value="Congelados">Congelados</option>
+                    <option value="Productos de limpieza">Productos de limpieza</option>
+                  </select>
+                </div>
+                <div class="input--box ml--3">
+                  <!-- <label for="search-brand">Marca:</label> -->
+                  <select id="search-brand" class="form--input" name="brand">
+                    <option value="0" disabled selected>Marca</option>
+                    <option value="Coca-Cola">Coca-Cola</option>
+                    <option value="Colun">Colun</option>
+                    <option value="Nescafe">Nescafe</option>
+                    <option value="Soprole">Soprole</option>
+                    <option value="Tucapel">Tucapel</option>
+                  </select>
+                </div>
+                <div class="input--box ml--3">
+                  <!-- <label for="search-type-sale">Tipo de venta:</label> -->
+                  <select id="search-type-sale" class="form--input" name="type-sale">
+                    <option value="0" disabled selected>Tipo de venta</option>
+                    <option value="Gramos">Gramos (g)</option>
+                    <option value="Kilogramos">Kilogramos (kg)</option>
+                    <option value="Unidad">Unidad (u)</option>
+                    <option value="Litros">Litros (lt)</option>
+                  </select>
+                </div>
+                <div class="input--box ml--3">
+                  <button class="btn btn--primary radius--sm" type="submit">
+                    <i class="bi bi-funnel-fill mr--4"></i>
+                    <span>Filtrar Búsqueda</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="main--buttons--actions">
               <a class="btn btn--link btn--success radius--sm" href="./agregar_producto.html">
                 <i class="bi bi-bag-plus-fill mr--4"></i>
                 Agregar Producto
@@ -284,7 +296,7 @@
                 <i class="bi bi-trash3-fill mr--4"></i>
                 Eliminar productos
               </button>
-            </form>
+            </div>
           </div>
         </header>
 

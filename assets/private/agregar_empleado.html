@@ -108,7 +108,7 @@
         <nav class="nav--main">
           <ul class="nav--main--list">
             <li>
-              <a class="nav--main--link center--row gap--4" href="../public/inventario.html">
+              <a class="nav--main--link center--row gap--4" href="../public/productos.html">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -121,7 +121,7 @@
                   <path
                     d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zM10 8a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zm-6 4a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm4-3a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0v-3a1 1 0 0 1 1-1" />
                 </svg>
-                <span>Inventario</span>
+                <span>Productos</span>
               </a>
             </li>
             <li>
@@ -156,32 +156,20 @@
       <!-- ----------- MAIN ----------- -->
 
       <!-- TODO: datos formulario
-        --- Identificación personal
+        * --- IDENTIFICACION PERSONAL
         - Nombre
-        - Nombre 2
         - Apellido 1
         - Apellido 2
+        - RUT
         - Fecha Nacimiento
         - Nacionalidad
-        - RUT
         - Genero
-        - Estado civil
-        --- Datos de contacto
+        - Definir ROL (lo debe hacer el ADMIN)
+        * --- DATOS DE CONTACTO
         - Dirección
-        - Ciudad/Comuna
         - Numero Teléfono
         - Numero Teléfono Emergencia
         - Email
-        --- Datos laborales
-        - Cargo/Posición
-        - Fecha de Contratación
-        - Fecha de Finalización (opcional)
-        - Tipo de salario
-        - Salario
-        --- Datos de seguridad y acceso
-        - Usuario
-        - Contraseña
-        - Definir ROL (lo debe hacer el ADMIN)
   -->
 
       <main class="main--section">
@@ -190,54 +178,18 @@
         </header>
 
         <section>
-          <!--Para cuadros de texto label-->
-          <!--Label usa for para vincular a input-->
-          <label for="Nombre">Nombres:</label>
-          <!--Para poner ejemplo usamos placeholder-->
-          <!--Input id Deber ser igual a for-->
-          <input id="Nombre" type="text" placeholder="Lucas " />
-
-          <label for="Apellido">Apellidos:</label>
-          <input id="Apellido" type="text" placeholder="Jara" />
-
-          <label for="Rut">Rut:</label>
-          <input id="Rut" type="text" placeholder="00.000.000-0" />
-
-          <label for="Direccion">Direccion </label>
-          <input id="Direccion" type="text" placeholder="Avenida Kong 367, Nintendo" />
-
-          <label for="Nacimiento"> Fecha de Nacimiento </label>
-          <input id="Nacimiento" type="text" placeholder="03-01-01" />
-
-          <label for="Numero">Numero Telefonico: </label>
-          <input id="Numero" type="text" placeholder="978904532" />
-
-          <label for="Correo">Correo Electronico:</label>
-          <input id="Correo" type="text" placeholder="Luquitasbcspn@Gmail.com" />
-
-          <button>Crear Usuario</button>
-          <button>Cancelar</button>
-
           <form class="form--add--employee" method="post">
             <!-- TODO: grid de 3 columnas -->
             <fieldset>
               <legend>Información Personal</legend>
               <div class="grid grid--6--cols gap--cols--5">
                 <div class="input--box">
-                  <label for="employee-first-name" class="form--label">Primer Nombre</label>
-                  <input
-                    id="employee-first-name"
-                    class="form--input"
-                    type="text"
-                    name="employeeFirstName" />
+                  <label for="employee-names" class="form--label">Nombres</label>
+                  <input id="employee-names" class="form--input" type="text" name="employeeNames" />
                 </div>
                 <div class="input--box">
-                  <label for="employee-second-name" class="form--label">Segundo Nombre</label>
-                  <input
-                    id="employee-second-name"
-                    class="form--input"
-                    type="text"
-                    name="employeeSecondName" />
+                  <label for="employee-rut" class="form--label">Rut</label>
+                  <input id="employee-rut" class="form--input" type="text" name="employeeRut" />
                 </div>
                 <div class="input--box">
                   <label for="employee-first-last-name" class="form--label">Primer Apellido</label>
@@ -275,32 +227,74 @@
                     name="employeeNationality" />
                 </div>
                 <div class="input--box">
-                  <label for="employee-rut" class="form--label">Rut</label>
-                  <input id="employee-rut" class="form--input" type="text" name="employeeRut" />
-                </div>
-                <div class="input--box">
                   <label for="employee-gender" class="form--label">Genero</label>
                   <!-- TODO: agregar mas géneros? -->
                   <select class="form--input" name="employeeGender" id="employee-gender" required>
+                    <option value="">Seleccione un Genero</option>
                     <option value="Masculino">Masculino</option>
                     <option value="Femenino">Femenino</option>
+                    <option value="Otro">Otro</option>
                   </select>
                 </div>
                 <div class="input--box">
-                  <label for="employee-marital-status" class="form--label">Estado Civil</label>
-                  <select
-                    name="employeeMaritalStatus"
-                    id="employee-marital-status"
-                    class="form--input"
-                    required>
-                    <option value="">Selecciona un Estado Civil</option>
-                    <option value="Casado">Casado</option>
-                    <option value="Soltero">Soltero</option>
-                    <option value="Divorciado">Divorciado</option>
+                  <label for="employee-role" class="form--label">Rol</label>
+                  <select name="employeeRole" class="form--input" id="employee-role">
+                    <option value="">Seleccione un Rol</option>
+                    <option value="0">Administrador</option>
+                    <option value="1">Empleado</option>
                   </select>
                 </div>
               </div>
             </fieldset>
+            <fieldset>
+              <legend>Datos de Contacto</legend>
+              <div class="grid grid--6--cols gap--cols--5">
+                <div class="input--box">
+                  <label for="employee-direction" class="form--label">Dirección</label>
+                  <input id="employee-direction" class="form--input" type="text" />
+                </div>
+                <div class="input--box">
+                  <label for="employee-email" class="form--label">Correo Electronico</label>
+                  <input
+                    type="email"
+                    name="employeeEmail"
+                    id="employee-email"
+                    class="form--input" />
+                </div>
+                <div class="input--box">
+                  <label for="employee-contact" class="form--label">Telefono</label>
+                  <input
+                    class="form--input"
+                    type="tel"
+                    name="employeeContact"
+                    id="employee-contact" />
+                </div>
+                <div class="input--box">
+                  <label for="employee-contact-emergency" class="form--label">
+                    Telefono Emergencia
+                  </label>
+                  <input
+                    type="tel"
+                    name="employeeContactEmergency"
+                    id="employee-contact-emergency"
+                    class="form--input" />
+                </div>
+              </div>
+            </fieldset>
+            <div class="grid grid--6--cols gap--cols--5">
+              <div class="input--box">
+                <button type="reset" class="btn btn--delete radius--sm">
+                  <i class="bi bi-eraser-fill"></i>
+                  Limpiar
+                </button>
+              </div>
+              <div class="input--box">
+                <button class="btn btn--success radius--sm">
+                  <i class="bi bi-bag-plus-fill mr--4"></i>
+                  Agregar
+                </button>
+              </div>
+            </div>
           </form>
         </section>
       </main>

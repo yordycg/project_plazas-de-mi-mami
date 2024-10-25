@@ -39,6 +39,7 @@
   --primary-color: #134074;
   --shade--10--color: #113a68;
   --shade--20--color: #0f335d;
+  --shade--30--color: #0d2d51;
   --tint--10--color: #2b5382;
   --tint--20--color: #426690;
   --gray-color: #d0d9e3;
@@ -105,14 +106,26 @@ h2 {
     var(--shadow-color) 0px 4px 6px, var(--shadow-color) 0px 12px 13px,
     var(--shadow-color) 0px -3px 5px;
 }
+.mt--5 {
+  margin-top: 2.4rem !important;
+}
 .margin--bottom--sm {
   margin-bottom: 0.8rem;
 }
 .margin--bottom--md {
   margin-bottom: 1.6rem;
 }
+.ml--2 {
+  margin-left: 0.8rem !important;
+}
+.ml--3 {
+  margin-left: 1.2rem !important;
+}
 .ml--4 {
-  margin-left: 0.4rem;
+  margin-left: 1.6rem !important;
+}
+.ml--5 {
+  margin-left: 2.4rem !important;
 }
 .mr--4 {
   margin-right: 0.4rem;
@@ -247,9 +260,9 @@ h2 {
   color: var(--white-color);
 }
 .btn--primary:is(:hover, :active) {
-  background-color: var(--white-color);
-  color: var(--primary-color);
-  box-shadow: inset 0 0 0 2px var(--primary-color); /* borde interior */
+  background-color: var(--shade--30--color);
+  /* color: var(--primary-color); */
+  /* box-shadow: inset 0 0 0 2px var(--primary-color);  */
 }
 .btn--outline {
   background-color: transparent;
@@ -455,13 +468,16 @@ dialog::backdrop {
 /* TODO: hacer que los 'hr' solo ocupen el 80% y centrarlos al sidebar */
 .sidebar--section hr {
   background-color: var(--white-color);
-}
-.sidebar--section hr:first-of-type {
-  margin: 0 0 2.4rem;
-}
-.sidebar--section hr:last-of-type {
   margin: 2.4rem 0;
 }
+.sidebar--section hr:first-of-type {
+  /* margin: 0 0 2.4rem; */
+  margin-top: 0;
+}
+/* .sidebar--section hr:last-of-type {
+  margin: 2.4rem 0;
+} */
+
 /* SEARCH SECTION --------------------------------------------------------------------------------*/
 .search {
   position: relative;
@@ -562,7 +578,7 @@ dialog::backdrop {
   padding: 2.4rem;
 }
 .title {
-  font-size: 3.6rem;
+  font-size: 3rem;
   text-align: center;
   /* margin-bottom: 1.6rem; */
 }
@@ -575,6 +591,10 @@ dialog::backdrop {
 .main--section .search--filters {
   font-size: 1.6rem;
   margin-top: 1.6rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 /* .main--section form {
   font-size: 1.6rem;
@@ -589,6 +609,11 @@ dialog::backdrop {
   width: 20rem;
   height: 2.4rem;
 } */
+.search--filters > .search--form--box > form {
+  display: flex;
+  align-items: center;
+}
+
 .main--header--buttons {
   display: flex;
   flex-direction: row-reverse;
@@ -655,7 +680,7 @@ tbody tr:hover {
   grid-column: 1 / span 3;
 }
 .input--box:has(.btn) {
-  margin-top: 2.4rem;
+  /* margin-top: 2.4rem; */
   place-self: center;
 }
 
