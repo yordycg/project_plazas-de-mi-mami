@@ -2,6 +2,11 @@
 // Variables globales ------------------------------------------------------------------------------
 
 // VALIDAR UN USUARIO EN LOGIN ---------------------------------------------------------------------
+/*
+  - TODO: hacer 2 usuarios un "admin" y "empleado"
+  - TODO: "empleado" no puede tener acceso a la vista "empleados", quitar del  SIDEBAR
+*/
+
 const formLogin = document.getElementById("login--form");
 
 formLogin.addEventListener("submit", (event) => {
