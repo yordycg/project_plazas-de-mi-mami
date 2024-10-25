@@ -174,114 +174,101 @@
 
       <main class="main--section">
         <header>
-          <h1 class="title">Agregar Usuario</h1>
+          <h1 class="title">Agregar Empleado</h1>
         </header>
 
         <section>
           <form class="form--add--employee" method="post">
-            <!-- TODO: grid de 3 columnas -->
-            <fieldset>
+            <fieldset class="grid grid--6--cols gap--cols--5">
               <legend>Información Personal</legend>
-              <div class="grid grid--6--cols gap--cols--5">
-                <div class="input--box">
-                  <label for="employee-names" class="form--label">Nombres</label>
-                  <input id="employee-names" class="form--input" type="text" name="employeeNames" />
-                </div>
-                <div class="input--box">
-                  <label for="employee-rut" class="form--label">Rut</label>
-                  <input id="employee-rut" class="form--input" type="text" name="employeeRut" />
-                </div>
-                <div class="input--box">
-                  <label for="employee-first-last-name" class="form--label">Primer Apellido</label>
-                  <input
-                    id="employee-first-last-name"
-                    class="form--input"
-                    type="text"
-                    name="employeeFirstLastName" />
-                </div>
-                <div class="input--box">
-                  <label for="employee-second-last-name" class="form--label"
-                    >Segundo Apellido</label
-                  >
-                  <input
-                    id="employee-second-last-name"
-                    class="form--input"
-                    type="text"
-                    name="employeeSecondLastName" />
-                </div>
-                <div class="input--box">
-                  <label for="employee-birth-date" class="form--label">Fecha de Nacimiento</label>
-                  <input
-                    type="date"
-                    class="form--input"
-                    name="employeeBirthDate"
-                    id="employee-birth-date" />
-                </div>
-                <div class="input--box">
-                  <label for="employee-nationality" class="form--label">Nacionalidad</label>
-                  <!-- TODO: debe ser un elemento select? -->
-                  <input
-                    id="employee-nationality"
-                    class="form--input"
-                    type="text"
-                    name="employeeNationality" />
-                </div>
-                <div class="input--box">
-                  <label for="employee-gender" class="form--label">Genero</label>
-                  <!-- TODO: agregar mas géneros? -->
-                  <select class="form--input" name="employeeGender" id="employee-gender" required>
-                    <option value="">Seleccione un Genero</option>
-                    <option value="Masculino">Masculino</option>
-                    <option value="Femenino">Femenino</option>
-                    <option value="Otro">Otro</option>
-                  </select>
-                </div>
-                <div class="input--box">
-                  <label for="employee-role" class="form--label">Rol</label>
-                  <select name="employeeRole" class="form--input" id="employee-role">
-                    <option value="">Seleccione un Rol</option>
-                    <option value="0">Administrador</option>
-                    <option value="1">Empleado</option>
-                  </select>
-                </div>
+              <div class="input--box">
+                <label for="employee-names" class="form--label">Nombres</label>
+                <input id="employee-names" class="form--input" type="text" name="employeeNames" />
+              </div>
+              <div class="input--box">
+                <label for="employee-rut" class="form--label">Rut</label>
+                <input id="employee-rut" class="form--input" type="text" name="employeeRut" />
+              </div>
+              <div class="input--box">
+                <label for="employee-first-last-name" class="form--label">Primer Apellido</label>
+                <input
+                  id="employee-first-last-name"
+                  class="form--input"
+                  type="text"
+                  name="employeeFirstLastName" />
+              </div>
+              <div class="input--box">
+                <label for="employee-second-last-name" class="form--label">Segundo Apellido</label>
+                <input
+                  id="employee-second-last-name"
+                  class="form--input"
+                  type="text"
+                  name="employeeSecondLastName" />
+              </div>
+              <div class="input--box">
+                <label for="employee-birth-date" class="form--label">Fecha de Nacimiento</label>
+                <input
+                  type="date"
+                  class="form--input"
+                  name="employeeBirthDate"
+                  id="employee-birth-date" />
+              </div>
+              <div class="input--box">
+                <label for="employee-nationality" class="form--label">Nacionalidad</label>
+                <!-- TODO: debe ser un elemento select? -->
+                <input
+                  id="employee-nationality"
+                  class="form--input"
+                  type="text"
+                  name="employeeNationality" />
+              </div>
+              <div class="input--box">
+                <label for="employee-gender" class="form--label">Genero</label>
+                <!-- TODO: agregar mas géneros? -->
+                <select class="form--input" name="employeeGender" id="employee-gender" required>
+                  <option value="" disabled selected>Seleccione un Genero</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+              <div class="input--box">
+                <label for="employee-role" class="form--label">Rol</label>
+                <select name="employeeRole" class="form--input" id="employee-role">
+                  <option value="" disabled selected>Seleccione un Rol</option>
+                  <option value="0">Administrador</option>
+                  <option value="1">Empleado</option>
+                </select>
               </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="grid grid--6--cols gap--cols--5">
               <legend>Datos de Contacto</legend>
-              <div class="grid grid--6--cols gap--cols--5">
-                <div class="input--box">
-                  <label for="employee-direction" class="form--label">Dirección</label>
-                  <input id="employee-direction" class="form--input" type="text" />
-                </div>
-                <div class="input--box">
-                  <label for="employee-email" class="form--label">Correo Electronico</label>
-                  <input
-                    type="email"
-                    name="employeeEmail"
-                    id="employee-email"
-                    class="form--input" />
-                </div>
-                <div class="input--box">
-                  <label for="employee-contact" class="form--label">Telefono</label>
-                  <input
-                    class="form--input"
-                    type="tel"
-                    name="employeeContact"
-                    id="employee-contact" />
-                </div>
-                <div class="input--box">
-                  <label for="employee-contact-emergency" class="form--label">
-                    Telefono Emergencia
-                  </label>
-                  <input
-                    type="tel"
-                    name="employeeContactEmergency"
-                    id="employee-contact-emergency"
-                    class="form--input" />
-                </div>
+              <div class="input--box">
+                <label for="employee-direction" class="form--label">Dirección</label>
+                <input id="employee-direction" class="form--input" type="text" />
               </div>
-            </fieldset>
-            <div class="grid grid--6--cols gap--cols--5">
+              <div class="input--box">
+                <label for="employee-email" class="form--label">Correo Electrónico</label>
+                <input type="email" name="employeeEmail" id="employee-email" class="form--input" />
+              </div>
+              <div class="input--box">
+                <label for="employee-contact" class="form--label">Teléfono</label>
+                <input
+                  class="form--input"
+                  type="tel"
+                  name="employeeContact"
+                  id="employee-contact" />
+              </div>
+              <div class="input--box">
+                <label for="employee-contact-emergency" class="form--label">
+                  Teléfono Emergencia
+                </label>
+                <input
+                  type="tel"
+                  name="employeeContactEmergency"
+                  id="employee-contact-emergency"
+                  class="form--input" />
+              </div>
               <div class="input--box">
                 <button type="reset" class="btn btn--delete radius--sm">
                   <i class="bi bi-eraser-fill"></i>
@@ -294,7 +281,7 @@
                   Agregar
                 </button>
               </div>
-            </div>
+            </fieldset>
           </form>
         </section>
       </main>

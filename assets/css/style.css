@@ -148,6 +148,12 @@ h2 {
   display: flex;
   align-items: center;
 }
+.center--cols {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
 
 /* GRID ------------------------------------------------------------------------------------------*/
 .container--grid {
@@ -240,8 +246,8 @@ h2 {
   text-decoration: none;
   color: var(--white-color);
 }
-.btn--icon--text {
-}
+/* .btn--icon--text {
+} */
 .btn--sm {
   padding: 0.6rem 1.2rem;
   font-size: 1.4rem;
@@ -301,6 +307,51 @@ h2 {
 .input--disabled {
   cursor: not-allowed;
 }
+form :is(.form--label, .form--input) {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+form fieldset {
+  border: none;
+  margin-top: 1.6rem;
+}
+fieldset legend {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+fieldset .input--box:has(.btn) {
+  margin-top: 2.4rem;
+}
+.input--box {
+  margin: 0.8rem 0;
+}
+.input--box .form--label {
+  display: block;
+  margin-bottom: 1rem;
+  padding-left: 1.2rem;
+}
+.input--box .form--input {
+  width: 100%;
+  min-height: 3.6rem;
+  padding: 0.6rem 1.2rem;
+  outline: none;
+  border-radius: 0.6rem;
+  border: 1px solid var(--shadow-color);
+}
+.input--box .form--input:is(:focus, :focus-visible) {
+  border-color: var(--tint--10--color);
+  outline: 0.2rem solid transparent;
+  outline-offset: 0.2rem;
+}
+.input--box {
+  grid-column: span 3;
+}
+.input--box:first-of-type {
+  grid-column: 1 / span 3;
+}
+.input--box:has(.btn) {
+  place-self: center;
+}
 
 /*------------------------------------------------------------------------------------------------*/
 /* CUSTOM CSS */
@@ -351,43 +402,17 @@ h2 {
 }
 /* LOGIN FORM ------------------------------------------------------------------------------------*/
 .login--form--box {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   padding: 3rem;
 }
 .login--form {
   width: 80%;
 }
-form :is(.form--label, .form--input) {
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-fieldset {
-  border: none;
-  padding: 3.2rem 0;
-}
-.input--box {
-  margin: 0.8rem 0;
-}
-.input--box .form--label {
-  display: block;
-  margin-bottom: 1rem;
-  padding-left: 1.2rem;
-}
-.input--box .form--input {
-  width: 100%;
-  min-height: 3.6rem;
-  padding: 0.6rem 1.2rem;
-  outline: none;
-  border-radius: 0.6rem;
-  border: 1px solid var(--shadow-color);
-}
-.input--box .form--input:is(:focus, :focus-visible) {
-  border-color: var(--tint--10--color);
-  outline: 0.2rem solid transparent;
-  outline-offset: 0.2rem;
+.login--form button:first-of-type {
+  margin-top: 2.4rem;
 }
 
 /* LOGIN MODAL -----------------------------------------------------------------------------------*/
@@ -565,17 +590,22 @@ dialog::backdrop {
 .main--section {
   grid-area: main;
 
-  padding: 2rem;
+  /* padding: 1rem; */
   max-width: 140rem;
   margin: 0 auto;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
 }
 
 /* MAIN HEADER -----------------------------------------------------------------------------------*/
 .main--section header {
   background-color: var(--white-color);
   border-radius: 0.9rem;
-  padding: 2.4rem;
+  padding: 1.6rem;
+  /* margin-top: 2.4rem; */
+  margin: 2.4rem 0;
 }
 .title {
   font-size: 3rem;
@@ -583,9 +613,9 @@ dialog::backdrop {
   /* margin-bottom: 1.6rem; */
 }
 /* agregar un margin-bottom cuando dentro del header exista un div con clase 'search--filters */
-.main--section header:has(div.search--filters) {
+/* .main--section header:has(div.search--filters) {
   margin-bottom: 1.6rem;
-}
+} */
 
 /* SEARCH FILTER ---------------------------------------------------------------------------------*/
 .main--section .search--filters {
@@ -596,19 +626,6 @@ dialog::backdrop {
   justify-content: space-between;
   align-items: center;
 }
-/* .main--section form {
-  font-size: 1.6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2.4rem;
-
-  margin-top: 1.6rem;
-}
-.main--section form select {
-  width: 20rem;
-  height: 2.4rem;
-} */
 .search--filters > .search--form--box > form {
   display: flex;
   align-items: center;
@@ -618,6 +635,19 @@ dialog::backdrop {
   display: flex;
   flex-direction: row-reverse;
   gap: 1.6rem;
+}
+
+/* MAIN SECTION WITH FORM ------------------------------------------------------------------------*/
+.main--section section:has(form) {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* MAIN SECTION WITH TABLE -----------------------------------------------------------------------*/
+.main--section section:has(table) {
+  flex-grow: 1;
+  /* padding-top: 2.4rem; */
 }
 
 /* TABLE -----------------------------------------------------------------------------------------*/
@@ -651,9 +681,6 @@ tbody tr:hover {
 }
 
 /* FORM ADD PRODUCT - PROVIDER -------------------------------------------------------------------*/
-.main--section section {
-  padding: 3.6rem 0;
-}
 .form--add--product,
 .form--add--provider {
   display: grid;
@@ -661,33 +688,13 @@ tbody tr:hover {
   column-gap: 2.4rem;
 
   max-width: 70rem;
-  margin: 0 auto;
-}
-/* .form--add--product .input--box {
-  grid-column: span 3;
-}.form--add--producto
-.form--add--product .input--box:first-of-type {
-  grid-column: 1 / span 3;
-}
-.form--add--product .input--box:has(.btn) {
-  margin-top: 2.4rem;
-  place-self: center;
-} */
-.input--box {
-  grid-column: span 3;
-}
-.input--box:first-of-type {
-  grid-column: 1 / span 3;
-}
-.input--box:has(.btn) {
-  /* margin-top: 2.4rem; */
-  place-self: center;
+  /* margin: 0 auto; */
 }
 
 /* FORM ADD EMPLOYEE -----------------------------------------------------------------------------*/
 .form--add--employee {
   max-width: 70rem;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 /*------------------------------------------------------------------------------------------------*/
