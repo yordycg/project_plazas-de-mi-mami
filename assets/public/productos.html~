@@ -225,8 +225,8 @@
           <table class="table">
             <thead>
               <tr>
-                <th>-</th>
-                <th>ID</th>
+                <th class="center--col--table">-</th>
+                <th class="center--col--table">ID</th>
                 <th>Nombre de producto</th>
                 <th>Departamento</th>
                 <th>Tipo Venta</th>
@@ -240,21 +240,21 @@
             </thead>
             <tbody>
               <tr>
-                <td class="center--col--table">
+                <td>
                   <input type="checkbox" name="provider_id" value="1" />
                 </td>
-                <td class="center--col--table">1</td>
+                <td>1</td>
                 <td class="table--main--name"><strong>Arroz 1kg.</strong></td>
                 <td>Abarrotes</td>
                 <td>Unidad</td>
                 <td>...</td>
                 <td>$ 1.500</td>
                 <td>$ 1.200</td>
-                <td class="center--col--table">
+                <td>
                   <p class="status equal">5</p>
                 </td>
-                <td class="center--col--table">5</td>
-                <td class="center--col--table">
+                <td>5</td>
+                <td>
                   <button class="btn btn--update btn--icon">
                     <i class="bi bi-pencil-square"></i>
                   </button>
@@ -278,7 +278,7 @@
                   <p class="status minimum">3</p>
                 </td>
                 <td>5</td>
-                <td class="center--col--table">
+                <td>
                   <button class="btn btn--update btn--icon">
                     <i class="bi bi-pencil-square"></i>
                   </button>
