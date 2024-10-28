@@ -282,10 +282,18 @@ h2 {
   box-shadow: inset 0 0 0 2px var(--primary-color);
 }
 .btn--delete {
+  background-color: var(--error-color);
+  color: var(--white-color);
+}
+.btn--delete:is(:hover, :active) {
+  background-color: var(--white-color);
+  color: var(--error-color);
+}
+.btn--delete--icon {
   background-color: transparent;
   color: var(--error-color);
 }
-.btn--delete:is(:hover, :active) {
+.btn--delete--icon:is(:hover, :active) {
   background-color: var(--error-color);
   color: var(--white-color);
 }
@@ -380,9 +388,13 @@ fieldset .input--box:has(.btn) {
   grid-area: footer;
 }
 .login {
-  /* max-width: var(--max-width-desktop); */
-  max-width: 90rem;
-  min-width: 40rem;
+  /*
+   * min()
+   * Si el 90% del ancho de la ventana es menor a 900px, se usará ese valor.
+   * Si el 90% de la ventana es mayor que 900px, se usará 900px como límite.
+  */
+  max-width: min(90%, 90rem);
+  min-width: min(90%, 40rem);
   max-height: 50rem;
   margin: 0 auto;
   display: grid;

@@ -7,17 +7,21 @@
 /* LOGIN TABLET - bajo 834px */
 /****************/
 @media (width <= 834px) {
-  .container--login {
-    max-width: 650px;
+  .login--form--box {
+    font-size: 1.4rem;
   }
-  .form--login h1 {
-    font-size: 24px;
+  .login--form--box h1 {
+    font-size: 2.4rem;
   }
-  .form--login h2 {
-    font-size: 18px;
+  .login--form--box h2,
+  .modal--login--section h2 {
+    font-size: 1.8rem;
   }
-  .sidebar {
-    max-width: 200px;
+  .login--form button {
+    font-size: 1.4rem;
+  }
+  .login--img {
+    height: 100%;
   }
 }
 /****************/
@@ -29,6 +33,19 @@
   }
   .login--img--box {
     display: none;
+  }
+  .login--form--box {
+    font-size: 1.4rem;
+  }
+  .login--form--box h1 {
+    font-size: 2.4rem;
+  }
+  .login--form--box h2,
+  .modal--login--section h2 {
+    font-size: 1.8rem;
+  }
+  .login--form button {
+    font-size: 1.4rem;
   }
   .modal--login--section {
     width: 40rem;

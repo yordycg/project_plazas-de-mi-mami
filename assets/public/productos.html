@@ -258,7 +258,7 @@
                   <button class="btn btn--update btn--icon">
                     <i class="bi bi-pencil-square"></i>
                   </button>
-                  <button class="btn btn--delete btn--icon">
+                  <button class="btn btn--delete--icon btn--icon">
                     <i class="bi bi-trash3-fill"></i>
                   </button>
                 </td>
@@ -282,7 +282,7 @@
                   <button class="btn btn--update btn--icon">
                     <i class="bi bi-pencil-square"></i>
                   </button>
-                  <button class="btn btn--delete btn--icon">
+                  <button class="btn btn--delete--icon btn--icon">
                     <i class="bi bi-trash3-fill"></i>
                   </button>
                 </td>
@@ -5139,57 +5139,62 @@
             </tbody>
           </table>
         </section>
-
-        <!-- ----------- MODAL: MODIFICAR PRODUCTO ----------- -->
-
-        <dialog>
-          <h2>Detalles del Producto</h2>
-          <form action="">
-            <label for="modal-product-id">ID:</label>
-            <input id="modal-product-id" type="text" name="product_id" value="3" />
-            <label for="modal-product-name">Nombre del producto:</label>
-            <input id="modal-product-name" type="text" name="product_name" value="Leche 1 lt." />
-            <label for="modal-product-department">Departamento:</label>
-            <select id="modal-product-department" name="product_department">
-              <option value="0">Tipo de departamento...</option>
-              <option value="Abarrotes">Abarrotes</option>
-              <option value="Lácteos" selected>Lácteos</option>
-              <option value="Frutas">Frutas</option>
-              <option value="Verduras">Verduras</option>
-              <option value="Panadería">Panadería</option>
-              <option value="Congelados">Congelados</option>
-              <option value="Productos de limpieza">Productos de limpieza</option>
-            </select>
-            <label for="modal-type-sale">Tipo de venta:</label>
-            <select id="modal-type-sale" name="product_type_sale">
-              <option value="0">Tipo de venta ...</option>
-              <option value="Gramos">Gramos (g)</option>
-              <option value="Kilogramos">Kilogramos (kg)</option>
-              <option value="Unidad">Unidad (u)</option>
-              <option value="Litros">Litros (lt)</option>
-            </select>
-            <label for="modal-product-brand">Marca:</label>
-            <select id="modal-product-brand" name="product_brand">
-              <option value="0">Tipo de marca ...</option>
-              <option value="Coca-Cola">Coca-Cola</option>
-              <option value="Colun">Colun</option>
-              <option value="Nescafe">Nescafe</option>
-              <option value="Soprole">Soprole</option>
-              <option value="Tucapel">Tucapel</option>
-            </select>
-            <label for="modal-product-sale">Precio de venta:</label>
-            <input id="modal-product-sale" type="text" name="product_sale" />
-            <label for="modal-product-cost">Costo del producto:</label>
-            <input id="modal-product-cost" type="text" name="product_cost" />
-            <label for="modal-product-amount">Cantidad:</label>
-            <input id="modal-product-amount" type="number" name="product_amount" />
-            <label for="modal-product-min-amount">Cantidad minima:</label>
-            <input id="modal-product-min-amount" type="number" name="product_min_amount" />
-            <input type="reset" value="Limpiar" />
-            <button>Actualizar</button>
-          </form>
-        </dialog>
       </main>
+
+      <!-- ----------- MODAL: MODIFICAR PRODUCTO ----------- -->
+
+      <dialog>
+        <header>
+          <button id="btn--close--modal" class="btn btn--icon btn--close">
+            <i class="bi bi-x"></i>
+          </button>
+          <h2>Editar Producto</h2>
+        </header>
+        <form id="form--update--product" method="dialog" autocomplete="off">
+          <label for="modal-product-id">ID:</label>
+          <input id="modal-product-id" type="text" name="product_id" value="3" />
+          <label for="modal-product-name">Nombre del producto:</label>
+          <input id="modal-product-name" type="text" name="product_name" value="Leche 1 lt." />
+          <label for="modal-product-department">Departamento:</label>
+          <select id="modal-product-department" name="product_department">
+            <option value="0">Tipo de departamento...</option>
+            <option value="Abarrotes">Abarrotes</option>
+            <option value="Lácteos" selected>Lácteos</option>
+            <option value="Frutas">Frutas</option>
+            <option value="Verduras">Verduras</option>
+            <option value="Panadería">Panadería</option>
+            <option value="Congelados">Congelados</option>
+            <option value="Productos de limpieza">Productos de limpieza</option>
+          </select>
+          <label for="modal-type-sale">Tipo de venta:</label>
+          <select id="modal-type-sale" name="product_type_sale">
+            <option value="0">Tipo de venta ...</option>
+            <option value="Gramos">Gramos (g)</option>
+            <option value="Kilogramos">Kilogramos (kg)</option>
+            <option value="Unidad">Unidad (u)</option>
+            <option value="Litros">Litros (lt)</option>
+          </select>
+          <label for="modal-product-brand">Marca:</label>
+          <select id="modal-product-brand" name="product_brand">
+            <option value="0">Tipo de marca ...</option>
+            <option value="Coca-Cola">Coca-Cola</option>
+            <option value="Colun">Colun</option>
+            <option value="Nescafe">Nescafe</option>
+            <option value="Soprole">Soprole</option>
+            <option value="Tucapel">Tucapel</option>
+          </select>
+          <label for="modal-product-sale">Precio de venta:</label>
+          <input id="modal-product-sale" type="text" name="product_sale" />
+          <label for="modal-product-cost">Costo del producto:</label>
+          <input id="modal-product-cost" type="text" name="product_cost" />
+          <label for="modal-product-amount">Cantidad:</label>
+          <input id="modal-product-amount" type="number" name="product_amount" />
+          <label for="modal-product-min-amount">Cantidad minima:</label>
+          <input id="modal-product-min-amount" type="number" name="product_min_amount" />
+          <input type="reset" value="Limpiar" />
+          <button>Actualizar</button>
+        </form>
+      </dialog>
 
       <!-- ----------- FOOTER ----------- -->
 
