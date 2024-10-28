@@ -14,8 +14,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet" />
 
+    <!-- ----------- CDN BOOTSTRAP ----------- -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
     <!-- ----------- CSS ----------- -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/queries.css" />
     <title>Plazas De Mi Mami</title>
   </head>
   <body>
@@ -36,7 +42,7 @@
 
             <!-- ----------- FORMULARIO LOGIN  ----------- -->
 
-            <form id="login--form" class="login--form" method="post">
+            <form id="login--form" class="login--form" method="post" autocomplete="off">
               <fieldset>
                 <div class="input--box">
                   <label for="usernameLogin" class="form--label">Usuario</label>
@@ -46,7 +52,7 @@
                     name="usernameLogin"
                     type="text"
                     placeholder="admin"
-                    maxlength="15"
+                    maxlength="10"
                     required />
                 </div>
                 <div class="input--box">
@@ -79,49 +85,48 @@
 
       <dialog id="modal--login" class="modal--login--section">
         <header>
-          <button id="btn--close--modal" class="btn--icon--primary">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              class="lucide lucide-x">
-              <path d="M18 6 6 18M6 6l12 12" />
-            </svg>
+          <button id="btn--close--modal" class="btn btn--icon btn--close">
+            <i class="bi bi-x"></i>
           </button>
           <h2>Cambiar contraseña!</h2>
         </header>
-        <form id="login--form--modal" class="login--form" method="post">
-          <label for="username--modal" class="form--label">Usuario</label>
-          <input
-            id="username--modal"
-            class="form--input radius--sm"
-            name="username"
-            type="text"
-            placeholder="admin10"
-            required />
-          <label for="password--modal" class="form--label">Nueva Contraseña</label>
-          <input
-            id="password--modal"
-            class="form--input radius--sm"
-            name="password"
-            type="password"
-            placeholder="********"
-            required />
-          <label for="password--confirm--modal" class="form--label">Confirmar Contraseña</label>
-          <input
-            id="password--confirm--modal"
-            class="form--input radius--sm"
-            name="password"
-            type="password"
-            placeholder="********"
-            required />
-          <button class="btn btn--full radius--sm" type="submit">Cambiar</button>
-          <button class="btn btn--outline radius--sm" type="reset">Limpiar</button>
+        <form id="login--form--modal" class="login--form" method="post" autocomplete="off">
+          <fieldset>
+            <div class="input--box">
+              <label for="username--modal" class="form--label">Usuario</label>
+              <input
+                id="username--modal"
+                class="form--input radius--sm"
+                name="username"
+                type="text"
+                placeholder="admin10"
+                required />
+            </div>
+            <div class="input--box">
+              <label for="password--modal" class="form--label">Nueva Contraseña</label>
+              <input
+                id="password--modal"
+                class="form--input radius--sm"
+                name="password"
+                type="password"
+                placeholder="********"
+                required />
+            </div>
+            <div class="input--box">
+              <label for="password--confirm--modal" class="form--label">Confirmar Contraseña</label>
+              <input
+                id="password--confirm--modal"
+                class="form--input radius--sm"
+                name="password"
+                type="password"
+                placeholder="********"
+                required />
+            </div>
+          </fieldset>
+          <button class="btn btn--full btn--primary radius--sm margin--bottom--md" type="submit">
+            Cambiar
+          </button>
+          <button class="btn btn--full btn--outline radius--sm" type="reset">Limpiar</button>
         </form>
       </dialog>
 

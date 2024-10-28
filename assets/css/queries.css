@@ -24,11 +24,14 @@
 /* LOGIN MOBILE - bajo 480px */
 /****************/
 @media (width <= 480px) {
-  .container--login {
-    width: 400px;
+  .login {
+    grid-template-columns: 1fr;
   }
-  .login--img {
+  .login--img--box {
     display: none;
+  }
+  .modal--login--section {
+    width: 40rem;
   }
 }
 /****************/

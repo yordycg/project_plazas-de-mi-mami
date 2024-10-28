@@ -1,5 +1,15 @@
 "use strict";
 // Variables globales ------------------------------------------------------------------------------
+const validUsers = [
+  {
+    username: "admin",
+    password: "12345678",
+  },
+  {
+    username: "empleado1",
+    password: "12345678",
+  },
+];
 
 // VALIDAR UN USUARIO EN LOGIN ---------------------------------------------------------------------
 /*
@@ -14,14 +24,27 @@ formLogin.addEventListener("submit", (event) => {
 
   // obtener los datos del formulario
   const usernameLogin = document.getElementById("usernameLogin").value;
+  console.log("🚀 ~ formLogin.addEventListener ~ usernameLogin:", usernameLogin);
   const passwordLogin = document.getElementById("passwordLogin").value;
+  console.log("🚀 ~ formLogin.addEventListener ~ passwordLogin:", passwordLogin);
 
   // validar los datos con una cuenta de usuario "falsa"
-  if (usernameLogin == "admin" && passwordLogin == "1234") {
-    window.location.href = "../assets/public/productos.html";
-  } else {
-    alert("Datos ingresados con corresponden!");
-  }
+  // if (usernameLogin == "admin" && passwordLogin == "1234") {
+  //   window.location.href = "../assets/public/productos.html";
+  // } else {
+  //   alert("Datos ingresados con corresponden!");
+  // }
+
+  let isUserValid = false;
+  validUsers.forEach((user) => {
+    if (usernameLogin === user.username && passwordLogin == user.password) {
+      window.location.href = "../assets/public/productos.html";
+      isUserValid = true;
+    }
+    if (!isUserValid) {
+      alert("Datos ingresados no corresponden!");
+    }
+  });
 });
 
 // MODAL LOGIN -------------------------------------------------------------------------------------

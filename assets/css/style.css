@@ -242,6 +242,10 @@ h2 {
   border-radius: 0.5rem;
   padding: 0.6rem 1.2rem;
 }
+.btn--close {
+  background-color: transparent;
+  padding: 0.6rem;
+}
 .btn--link:is(:link, :visited) {
   text-decoration: none;
   color: var(--white-color);
@@ -378,8 +382,8 @@ fieldset .input--box:has(.btn) {
 .login {
   /* max-width: var(--max-width-desktop); */
   max-width: 90rem;
-  max-height: 50rem;
   min-width: 40rem;
+  max-height: 50rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -416,12 +420,11 @@ fieldset .input--box:has(.btn) {
 /* LOGIN MODAL -----------------------------------------------------------------------------------*/
 .modal--login--section {
   position: fixed;
-  top: 50%;
+  /* centrar modal restando los 4rem del footer */
+  top: calc(50% - 2rem);
   left: 50%;
   transform: translate(-50%, -50%);
-  /* width: 50%; */
   width: 45rem;
-  /* height: 60rem; */
 
   background-color: var(--white-color);
   padding: 3rem;
@@ -436,7 +439,7 @@ dialog::backdrop {
   backdrop-filter: blur(0.3rem);
 }
 .modal--login--section > header {
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 .modal--login--section > header > h2 {
   display: block;
@@ -444,8 +447,14 @@ dialog::backdrop {
   margin: 0;
 }
 .modal--login--section > header > button {
-  position: relative;
-  left: calc(100% - 3rem);
+  /* position: relative;
+  left: calc(100% - 3rem); */
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding-top: 1.6rem;
+  padding-right: 1.6rem;
 }
 .modal--login--section > form {
   width: 100%;
