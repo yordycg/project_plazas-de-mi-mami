@@ -161,7 +161,7 @@
           <div class="search--filters">
             <div class="search--form--box">
               <form method="post">
-                <div class="input--box">
+                <div class="form--group">
                   <!-- <label for="search-department">Departamento:</label> -->
                   <select id="search-department" class="form--input" name="department">
                     <option value="0" disabled selected>Departamento</option>
@@ -174,7 +174,7 @@
                     <option value="Productos de limpieza">Productos de limpieza</option>
                   </select>
                 </div>
-                <div class="input--box ml--3">
+                <div class="form--group ml--3">
                   <!-- <label for="search-brand">Marca:</label> -->
                   <select id="search-brand" class="form--input" name="brand">
                     <option value="0" disabled selected>Marca</option>
@@ -185,7 +185,7 @@
                     <option value="Tucapel">Tucapel</option>
                   </select>
                 </div>
-                <div class="input--box ml--3">
+                <div class="form--group ml--3">
                   <!-- <label for="search-type-sale">Tipo de venta:</label> -->
                   <select id="search-type-sale" class="form--input" name="type-sale">
                     <option value="0" disabled selected>Tipo de venta</option>
@@ -195,7 +195,7 @@
                     <option value="Litros">Litros (lt)</option>
                   </select>
                 </div>
-                <div class="input--box ml--3">
+                <div class="form--group ml--3">
                   <button class="btn btn--primary radius--sm" type="submit">
                     <i class="bi bi-funnel-fill mr--4"></i>
                     <span>Filtrar Búsqueda</span>

@@ -181,15 +181,15 @@
           <form class="form--add--employee" method="post">
             <fieldset class="grid grid--6--cols gap--cols--5">
               <legend>Información Personal</legend>
-              <div class="input--box">
+              <div class="form--group">
                 <label for="employee-names" class="form--label">Nombres</label>
                 <input id="employee-names" class="form--input" type="text" name="employeeNames" />
               </div>
-              <div class="input--box">
+              <div class="form--group">
                 <label for="employee-rut" class="form--label">Rut</label>
                 <input id="employee-rut" class="form--input" type="text" name="employeeRut" />
               </div>
-              <div class="input--box">
+              <div class="form--group">
                 <label for="employee-first-last-name" class="form--label">Primer Apellido</label>
                 <input
                   id="employee-first-last-name"
@@ -197,7 +197,7 @@
                   type="text"
                   name="employeeFirstLastName" />
               </div>
-              <div class="input--box">
+              <div class="form--group">
                 <label for="employee-second-last-name" class="form--label">Segundo Apellido</label>
                 <input
                   id="employee-second-last-name"
@@ -205,7 +205,7 @@
                   type="text"
                   name="employeeSecondLastName" />
               </div>
-              <div class="input--box">
+              <div class="form--group">
                 <label for="employee-birth-date" class="form--label">Fecha de Nacimiento</label>
                 <input
                   type="date"
@@ -213,7 +213,7 @@
                   name="employeeBirthDate"
                   id="employee-birth-date" />
               </div>
-              <div class="input--box">
+              <div class="form--group">
                 <label for="employee-nationality" class="form--label">Nacionalidad</label>
                 <!-- TODO: debe ser un elemento select? -->
                 <input
@@ -222,7 +222,7 @@
                   type="text"
                   name="employeeNationality" />
               </div>
-              <div class="input--box">
+              <div class="form--group">
                 <label for="employee-gender" class="form--label">Genero</label>
                 <!-- TODO: agregar mas géneros? -->
                 <select class="form--input" name="employeeGender" id="employee-gender" required>
@@ -232,7 +232,7 @@
                   <option value="Otro">Otro</option>
                 </select>
               </div>
-              <div class="input--box">
+              <div class="form--group">
                 <label for="employee-role" class="form--label">Rol</label>
                 <select name="employeeRole" class="form--input" id="employee-role">
                   <option value="" disabled selected>Seleccione un Rol</option>
@@ -243,15 +243,15 @@
             </fieldset>
             <fieldset class="grid grid--6--cols gap--cols--5">
               <legend>Datos de Contacto</legend>
-              <div class="input--box">
+              <div class="form--group">
                 <label for="employee-direction" class="form--label">Dirección</label>
                 <input id="employee-direction" class="form--input" type="text" />
               </div>
-              <div class="input--box">
+              <div class="form--group">
                 <label for="employee-email" class="form--label">Correo Electrónico</label>
                 <input type="email" name="employeeEmail" id="employee-email" class="form--input" />
               </div>
-              <div class="input--box">
+              <div class="form--group">
                 <label for="employee-contact" class="form--label">Teléfono</label>
                 <input
                   class="form--input"
@@ -259,7 +259,7 @@
                   name="employeeContact"
                   id="employee-contact" />
               </div>
-              <div class="input--box">
+              <div class="form--group">
                 <label for="employee-contact-emergency" class="form--label">
                   Teléfono Emergencia
                 </label>
@@ -269,13 +269,13 @@
                   id="employee-contact-emergency"
                   class="form--input" />
               </div>
-              <div class="input--box">
+              <div class="form--group">
                 <button type="reset" class="btn btn--delete radius--sm">
                   <i class="bi bi-eraser-fill"></i>
                   Limpiar
                 </button>
               </div>
-              <div class="input--box">
+              <div class="form--group">
                 <button class="btn btn--success radius--sm">
                   <i class="bi bi-bag-plus-fill mr--4"></i>
                   Agregar

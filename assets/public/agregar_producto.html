@@ -161,25 +161,39 @@
           <h1 class="title">Agregar Producto</h1>
         </header>
         <section>
+          <!--
+          * POSIBLE FORMULARIO
+          - Nombre
+          - Descripción
+          - Marca
+          - Categoría
+          - Tipo de unidad
+          - Precio de venta
+          - Precio de compra
+          - Stock máximo
+          - Stock mínimo
+          - Stock
+          -->
+
           <form class="form--add--product" method="post">
-            <div class="input--box">
+            <div class="form--group">
               <label for="product-name" class="form--label">Nombre del producto</label>
               <input id="product-name" class="form--input" type="text" name="product_name" />
             </div>
-            <div class="input--box"></div>
-            <div class="input--box">
+            <div class="form--group"></div>
+            <div class="form--group">
               <label for="product-sale" class="form--label">Precio de venta</label>
               <input id="product-sale" class="form--input" type="number" name="product_sale" />
             </div>
-            <div class="input--box">
+            <div class="form--group">
               <label for="product-cost" class="form--label">Costo del producto</label>
               <input id="product-cost" class="form--input" type="number" name="product_cost" />
             </div>
-            <div class="input--box">
+            <div class="form--group">
               <label for="product-amount" class="form--label">Cantidad</label>
               <input id="product-amount" class="form--input" type="number" name="product_amount" />
             </div>
-            <div class="input--box">
+            <div class="form--group">
               <label for="product-min-amount" class="form--label">Cantidad minima</label>
               <input
                 id="product-min-amount"
@@ -187,7 +201,7 @@
                 type="number"
                 name="product_min_amount" />
             </div>
-            <div class="input--box">
+            <div class="form--group">
               <label for="product_department" class="form--label">Departamento</label>
               <select id="product-department" class="form--input" name="product_department">
                 <option value="" disabled selected>Seleccionar departamento...</option>
@@ -200,7 +214,7 @@
                 <option value="Producto de limpieza">Producto de limpieza</option>
               </select>
             </div>
-            <div class="input--box">
+            <div class="form--group">
               <label for="product-type-sale" class="form--label">Tipo de venta</label>
               <select id="product-type-sale" class="form--input" name="product_type_sale">
                 <option value="" disabled selected>Seleccionar tipo de venta...</option>
@@ -210,7 +224,7 @@
                 <option value="4">Litros (lt)</option>
               </select>
             </div>
-            <div class="input--box">
+            <div class="form--group">
               <label for="product-brand" class="form--label">Marca:</label>
               <select id="product-brand" class="form--input" name="product_brand">
                 <option value="" disabled selected>Tipo de marca ...</option>
@@ -221,14 +235,14 @@
                 <option value="Tucapel">Tucapel</option>
               </select>
             </div>
-            <div class="input--box"></div>
-            <div class="input--box mt--5">
+            <div class="form--group"></div>
+            <div class="form--group mt--5">
               <button type="reset" class="btn btn--delete radius--sm">
                 <i class="bi bi-eraser-fill"></i>
                 Limpiar
               </button>
             </div>
-            <div class="input--box mt--5">
+            <div class="form--group mt--5">
               <button class="btn btn--success radius--sm">
                 <i class="bi bi-bag-plus-fill mr--4"></i>
                 Agregar

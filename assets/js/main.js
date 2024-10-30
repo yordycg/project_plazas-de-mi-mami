@@ -1,4 +1,7 @@
 "use strict";
+
+import ToastrNotification from "./toastr.js";
+
 // Variables globales ------------------------------------------------------------------------------
 const validUsers = [
   {
@@ -42,7 +45,8 @@ formLogin.addEventListener("submit", (event) => {
       isUserValid = true;
     }
     if (!isUserValid) {
-      alert("Datos ingresados no corresponden!");
+      // TODO: me repite el mensaje 2 veces
+      ToastrNotification.error("Datos ingresados no corresponden!");
     }
   });
 });

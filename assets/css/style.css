@@ -139,8 +139,11 @@ h2 {
 .radius--sm {
   border-radius: 0.9rem;
 }
-.hidden {
+.none {
   display: none;
+}
+.hidden {
+  visibility: hidden;
 }
 
 /* FLEXBOX ---------------------------------------------------------------------------------------*/
@@ -288,6 +291,7 @@ h2 {
 .btn--delete:is(:hover, :active) {
   background-color: var(--white-color);
   color: var(--error-color);
+  box-shadow: inset 0 0 0 2px var(--error-color);
 }
 .btn--delete--icon {
   background-color: transparent;
@@ -329,18 +333,18 @@ fieldset legend {
   font-size: 1.8rem;
   font-weight: 600;
 }
-fieldset .input--box:has(.btn) {
+fieldset .form--group:has(.btn) {
   margin-top: 2.4rem;
 }
-.input--box {
-  margin: 0.8rem 0;
+.form--group {
+  margin: 0.8rem 0 0;
 }
-.input--box .form--label {
+.form--group .form--label {
   display: block;
   margin-bottom: 1rem;
   padding-left: 1.2rem;
 }
-.input--box .form--input {
+.form--group .form--input {
   width: 100%;
   min-height: 3.6rem;
   padding: 0.6rem 1.2rem;
@@ -348,18 +352,49 @@ fieldset .input--box:has(.btn) {
   border-radius: 0.6rem;
   border: 1px solid var(--shadow-color);
 }
-.input--box .form--input:is(:focus, :focus-visible) {
+.form--group .form--input:is(:focus, :focus-visible) {
   border-color: var(--tint--10--color);
   outline: 0.2rem solid transparent;
   outline-offset: 0.2rem;
 }
-.input--box {
+.form--group .form--input:is(:invalid) {
+  border-color: var(--error-color);
+}
+.form--validation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.2rem;
+  margin-top: 0.8rem;
+}
+.form--validation i {
+  font-size: 1.4rem;
+}
+.error--message {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1rem;
+  text-align: right;
+  color: var(--error-color);
+  /* min-height: 3.6rem; */
+}
+/* .error--icon i,
+.success--icon i {
+  font-size: 1.6rem;
+} */
+.error--icon {
+  color: var(--error-color);
+}
+.success--icon {
+  color: var(--success-color);
+}
+.form--group {
   grid-column: span 3;
 }
-.input--box:first-of-type {
+.form--group:first-of-type {
   grid-column: 1 / span 3;
 }
-.input--box:has(.btn) {
+.form--group:has(.btn) {
   place-self: center;
 }
 
