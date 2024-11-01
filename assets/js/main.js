@@ -1,6 +1,7 @@
 "use strict";
 
 import ToastrNotification from "./toastr.js";
+import validateForm from "./validationsForm.js";
 
 // Variables globales ------------------------------------------------------------------------------
 const validUsers = [
@@ -20,6 +21,9 @@ const validUsers = [
   - TODO: "empleado" no puede tener acceso a la vista "empleados", quitar del  SIDEBAR
 */
 
+validateForm("#login--form");
+
+/*
 const formLogin = document.getElementById("login--form");
 
 formLogin.addEventListener("submit", (event) => {
@@ -27,16 +31,9 @@ formLogin.addEventListener("submit", (event) => {
 
   // obtener los datos del formulario
   const usernameLogin = document.getElementById("usernameLogin").value;
-  console.log("🚀 ~ formLogin.addEventListener ~ usernameLogin:", usernameLogin);
+  // console.log("🚀 ~ formLogin.addEventListener ~ usernameLogin:", usernameLogin);
   const passwordLogin = document.getElementById("passwordLogin").value;
-  console.log("🚀 ~ formLogin.addEventListener ~ passwordLogin:", passwordLogin);
-
-  // validar los datos con una cuenta de usuario "falsa"
-  // if (usernameLogin == "admin" && passwordLogin == "1234") {
-  //   window.location.href = "../assets/public/productos.html";
-  // } else {
-  //   alert("Datos ingresados con corresponden!");
-  // }
+  // console.log("🚀 ~ formLogin.addEventListener ~ passwordLogin:", passwordLogin);
 
   let isUserValid = false;
   validUsers.forEach((user) => {
@@ -44,12 +41,14 @@ formLogin.addEventListener("submit", (event) => {
       window.location.href = "../assets/public/productos.html";
       isUserValid = true;
     }
-    if (!isUserValid) {
-      // TODO: me repite el mensaje 2 veces
-      ToastrNotification.error("Datos ingresados no corresponden!");
-    }
   });
+
+  // Mostramos notificacion del error
+  if (!isUserValid) {
+    ToastrNotification.error("Datos ingresados no corresponden!");
+  }
 });
+*/
 
 // MODAL LOGIN -------------------------------------------------------------------------------------
 const modal = document.getElementById("modal--login");

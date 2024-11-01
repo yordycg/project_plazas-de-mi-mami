@@ -321,7 +321,7 @@ h2 {
 .input--disabled {
   cursor: not-allowed;
 }
-form :is(.form--label, .form--input) {
+form :is(label, input) {
   font-size: 1.6rem;
   cursor: pointer;
 }
@@ -337,57 +337,41 @@ fieldset .form--group:has(.btn) {
   margin-top: 2.4rem;
 }
 .form--group {
-  margin: 0.8rem 0 0;
+  /* margin: 0.8rem 0 0; */
+  /* position: relative; */
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  /* min-height: 8.5rem; */
+  margin-bottom: 0.8rem;
 }
-.form--group .form--label {
+/* .form--group .form--label { */
+.form--group label {
   display: block;
-  margin-bottom: 1rem;
   padding-left: 1.2rem;
 }
-.form--group .form--input {
+/* .form--group .form--input { */
+.form--group input {
   width: 100%;
   min-height: 3.6rem;
   padding: 0.6rem 1.2rem;
   outline: none;
   border-radius: 0.6rem;
   border: 1px solid var(--shadow-color);
+
+  transition: all 0.3s ease;
 }
-.form--group .form--input:is(:focus, :focus-visible) {
+/* .form--group .form--input:is(:focus, :focus-visible) { */
+.form--group input:is(:focus, :focus-visible) {
   border-color: var(--tint--10--color);
   outline: 0.2rem solid transparent;
   outline-offset: 0.2rem;
 }
-.form--group .form--input:is(:invalid) {
+/* .form--group input:is(:invalid) {
   border-color: var(--error-color);
-}
-.form--validation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1.2rem;
-  margin-top: 0.8rem;
-}
-.form--validation i {
-  font-size: 1.4rem;
-}
-.error--message {
-  display: block;
-  font-size: 1.4rem;
-  line-height: 1rem;
-  text-align: right;
-  color: var(--error-color);
-  /* min-height: 3.6rem; */
-}
-/* .error--icon i,
-.success--icon i {
-  font-size: 1.6rem;
 } */
-.error--icon {
-  color: var(--error-color);
-}
-.success--icon {
-  color: var(--success-color);
-}
 .form--group {
   grid-column: span 3;
 }
@@ -398,6 +382,35 @@ fieldset .form--group:has(.btn) {
   place-self: center;
 }
 
+.form--validation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 0 1.2rem;
+  min-height: 2.3rem;
+}
+.form--validation i {
+  font-size: 1.4rem;
+}
+.error--message {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1rem;
+  color: var(--error-color);
+}
+.error--icon {
+  color: var(--error-color);
+}
+.success--icon {
+  color: var(--success-color);
+}
+.border--error {
+  border-color: var(--error-color) !important;
+}
+.border--success {
+  border-color: var(--success-color) !important;
+}
 /*------------------------------------------------------------------------------------------------*/
 /* CUSTOM CSS */
 /*------------------------------------------------------------------------------------------------*/
