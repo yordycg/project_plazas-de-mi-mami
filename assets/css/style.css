@@ -321,10 +321,6 @@ h2 {
 .input--disabled {
   cursor: not-allowed;
 }
-form :is(label, input) {
-  font-size: 1.6rem;
-  cursor: pointer;
-}
 form fieldset {
   border: none;
   margin-top: 1.6rem;
@@ -347,13 +343,18 @@ fieldset .form--group:has(.btn) {
   /* min-height: 8.5rem; */
   margin-bottom: 0.8rem;
 }
+form :is(label, input, select) {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
 /* .form--group .form--label { */
 .form--group label {
   display: block;
   padding-left: 1.2rem;
 }
 /* .form--group .form--input { */
-.form--group input {
+.form--group input,
+.form--group select {
   width: 100%;
   min-height: 3.6rem;
   padding: 0.6rem 1.2rem;
@@ -364,7 +365,8 @@ fieldset .form--group:has(.btn) {
   transition: all 0.3s ease;
 }
 /* .form--group .form--input:is(:focus, :focus-visible) { */
-.form--group input:is(:focus, :focus-visible) {
+.form--group input:is(:focus, :focus-visible)
+.form--group select:is(:focus, :focus-visible) {
   border-color: var(--tint--10--color);
   outline: 0.2rem solid transparent;
   outline-offset: 0.2rem;
@@ -411,6 +413,55 @@ fieldset .form--group:has(.btn) {
 .border--success {
   border-color: var(--success-color) !important;
 }
+
+.password--container {
+  position: relative;
+}
+.password--toggle {
+  position: absolute;
+  top: 50%;
+  right: 1.2rem;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.6rem;
+
+  display: flex;
+  align-items: center;
+}
+
+/* LOADER ---------------------------------------------------------------------------------------*/
+.loader--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 2rem;
+}
+.loader--container p {
+  font-size: 1.6rem;
+}
+.loader {
+  width: 45px;
+  height: 45px;
+  border: 5px solid var(--primary-color);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /*------------------------------------------------------------------------------------------------*/
 /* CUSTOM CSS */
 /*------------------------------------------------------------------------------------------------*/
@@ -473,9 +524,9 @@ fieldset .form--group:has(.btn) {
 .login--form {
   width: 80%;
 }
-.login--form button:first-of-type {
+/* .login--form button:first-of-type {
   margin-top: 2.4rem;
-}
+} */
 
 /* LOGIN MODAL -----------------------------------------------------------------------------------*/
 .modal--login--section {

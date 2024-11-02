@@ -47,7 +47,7 @@
 
             <!-- ----------- FORMULARIO LOGIN  ----------- -->
 
-            <form id="login--form" class="login--form" method="post" autocomplete="off">
+            <form id="login-form" class="login--form" method="post" autocomplete="off">
               <fieldset>
                 <div class="form--group">
                   <label for="username-login">Usuario</label>
@@ -55,7 +55,7 @@
                     id="username-login"
                     name="usernameLogin"
                     type="text"
-                    placeholder="juanito123"
+                    placeholder="admin1"
                     maxlength="10"
                     required />
                   <div class="form--validation">
@@ -63,7 +63,6 @@
                     <div class="error--icon none">
                       <i class="bi bi-exclamation-circle-fill"></i>
                     </div>
-                    <!-- TODO: este icono debe ir al lado derecho dentro del input? -->
                     <div class="success--icon none">
                       <i class="bi bi-check-circle-fill"></i>
                     </div>
@@ -71,22 +70,26 @@
                 </div>
                 <div class="form--group">
                   <label for="password-login">Contraseña</label>
-                  <!-- TODO: agregar un icon-eye/button para mostrar o ocultar la password -->
-                  <input
-                    id="password-login"
-                    name="passwordLogin"
-                    type="password"
-                    placeholder="********"
-                    minlength="8"
-                    pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}"
-                    title="La contraseña debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula y un número."
-                    required />
+                  <div class="password--container">
+                    <input
+                      id="password-login"
+                      name="passwordLogin"
+                      type="password"
+                      placeholder="********"
+                      minlength="8"
+                      pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}"
+                      title="La contraseña debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula y un número."
+                      required />
+                    <div class="password--toggle">
+                      <i id="eye-icon" class="bi bi-eye"></i>
+                      <i id="eye-slash-icon" class="bi bi-eye-slash none"></i>
+                    </div>
+                  </div>
                   <div class="form--validation">
                     <span id="password-login-error" class="error--message hidden"> </span>
                     <div class="error--icon none">
                       <i class="bi bi-exclamation-circle-fill"></i>
                     </div>
-                    <!-- TODO: este icono debe ir al lado derecho dentro del input? -->
                     <div class="success--icon none">
                       <i class="bi bi-check-circle-fill"></i>
                     </div>
@@ -98,7 +101,7 @@
                 type="submit">
                 Ingresar
               </button>
-              <button id="btn--open--modal" class="btn btn--full btn--outline radius--sm">
+              <button id="btn-open-modal" class="btn btn--full btn--outline radius--sm">
                 Cambiar contraseña
               </button>
             </form>
@@ -108,14 +111,14 @@
 
       <!-- ----------- MODAL LOGIN ----------- -->
 
-      <dialog id="modal--login" class="modal--login--section">
+      <dialog id="modal-login" class="modal--login--section">
         <header>
-          <button id="btn--close--modal" class="btn btn--icon btn--close">
+          <button id="btn-close-modal" class="btn btn--icon btn--close">
             <i class="bi bi-x"></i>
           </button>
           <h2>Cambiar contraseña!</h2>
         </header>
-        <form id="login--form--modal" class="login--form" method="dialog" autocomplete="off">
+        <form id="login-form-modal" class="login--form" method="dialog" autocomplete="off">
           <fieldset>
             <div class="form--group">
               <label for="username-login-modal" class="">Usuario</label>
@@ -124,36 +127,75 @@
                 class="form--input radius--sm"
                 name="username"
                 type="text"
-                placeholder="juanito123"
+                placeholder="admin1"
                 maxlength="10"
-                p
                 required />
+              <div class="form--validation">
+                <span id="username-login-error" class="error--message hidden"> </span>
+                <div class="error--icon none">
+                  <i class="bi bi-exclamation-circle-fill"></i>
+                </div>
+                <div class="success--icon none">
+                  <i class="bi bi-check-circle-fill"></i>
+                </div>
+              </div>
             </div>
             <div class="form--group">
               <label for="password-login-modal" class="">Nueva Contraseña</label>
-              <input
-                id="password-login-modal"
-                class="form--input radius--sm"
-                name="passwordModal"
-                type="password"
-                placeholder="********"
-                minlength="8"
-                pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}"
-                title="La NUEVA contraseña debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula y un número."
-                required />
+              <!-- TODO: en el modal no me funciona el toggle de contraseña -->
+              <div class="password--container">
+                <input
+                  id="password-login-modal"
+                  class="form--input radius--sm"
+                  name="passwordModal"
+                  type="password"
+                  placeholder="********"
+                  minlength="8"
+                  pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}"
+                  title="La NUEVA contraseña debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula y un número."
+                  required />
+                <div class="password--toggle">
+                  <i id="eye-icon" class="bi bi-eye"></i>
+                  <i id="eye-slash-icon" class="bi bi-eye-slash none"></i>
+                </div>
+              </div>
+              <div class="form--validation">
+                <span id="password-login-error" class="error--message hidden"> </span>
+                <div class="error--icon none">
+                  <i class="bi bi-exclamation-circle-fill"></i>
+                </div>
+                <div class="success--icon none">
+                  <i class="bi bi-check-circle-fill"></i>
+                </div>
+              </div>
             </div>
             <div class="form--group">
               <label for="password-confirm-login-modal" class=""> Confirmar Contraseña </label>
-              <input
-                id="password-confirm-login-modal"
-                class="form--input radius--sm"
-                name="passwordModalConfirm"
-                type="password"
-                placeholder="********"
-                minlength="8"
-                pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}"
-                title="La NUEVA contraseña debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula y un número."
-                required />
+              <div class="password--container">
+                <input
+                  id="password-confirm-login-modal"
+                  class="form--input radius--sm"
+                  name="passwordModalConfirm"
+                  type="password"
+                  placeholder="********"
+                  minlength="8"
+                  pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}"
+                  title="La NUEVA contraseña debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula y un número."
+                  required />
+                <div class="password--toggle">
+                  <i id="eye-icon" class="bi bi-eye"></i>
+                  <i id="eye-slash-icon" class="bi bi-eye-slash none"></i>
+                </div>
+              </div>
+              <div class="form--validation">
+                <span id="password-login-error" class="error--message hidden"> </span>
+                <div class="error--icon none">
+                  <i class="bi bi-exclamation-circle-fill"></i>
+                </div>
+                <div class="success--icon none">
+                  <i class="bi bi-check-circle-fill"></i>
+                </div>
+              </div>
             </div>
           </fieldset>
           <button class="btn btn--full btn--primary radius--sm margin--bottom--md" type="submit">
@@ -170,6 +212,7 @@
       </footer>
     </div>
 
+    <!-- ----------- CDN JQUERY ----------- -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- ----------- CDN TOASTER JS ----------- -->

@@ -1,68 +1,60 @@
-"use strict";
+'use strict';
 
-import ToastrNotification from "./toastr.js";
-import validateForm from "./validationsForm.js";
+import ToastrNotification from './toastr.js';
+import validateForm from './validationsForm.js';
+import { initProducts } from './products.js';
+import modalActions from './modal.js';
 
 // Variables globales ------------------------------------------------------------------------------
 const validUsers = [
   {
-    username: "admin",
-    password: "12345678",
+    username: 'admin',
+    password: '12345678',
   },
   {
-    username: "empleado1",
-    password: "12345678",
+    username: 'empleado1',
+    password: '12345678',
   },
 ];
+// MODALES -----------------------------------------------------------------------------------------
+modalActions('#modal-login');
+modalActions('#modal--update--product');
 
 // VALIDAR UN USUARIO EN LOGIN ---------------------------------------------------------------------
 /*
   - TODO: hacer 2 usuarios un "admin" y "empleado"
   - TODO: "empleado" no puede tener acceso a la vista "empleados", quitar del  SIDEBAR
+  - TODO: que el boton "reset" del formulario, quite los estilos de validación
 */
+validateForm('#login-form');
+validateForm('#login-form-modal');
 
-validateForm("#login--form");
+// EYE TOGGLE PASSWORD -----------------------------------------------------------------------------
+const passwordContainers = document.querySelectorAll('.password--container');
 
-/*
-const formLogin = document.getElementById("login--form");
+passwordContainers.forEach((container) => {
+  const togglePassword = document.querySelector('.password--toggle');
+  const eyeIcon = document.getElementById('eye-icon');
+  const eyeSlashIcon = document.getElementById('eye-slash-icon');
+  const inputPassword = document.querySelector('.password--container input[type="password"]');
 
-formLogin.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  // obtener los datos del formulario
-  const usernameLogin = document.getElementById("usernameLogin").value;
-  // console.log("🚀 ~ formLogin.addEventListener ~ usernameLogin:", usernameLogin);
-  const passwordLogin = document.getElementById("passwordLogin").value;
-  // console.log("🚀 ~ formLogin.addEventListener ~ passwordLogin:", passwordLogin);
-
-  let isUserValid = false;
-  validUsers.forEach((user) => {
-    if (usernameLogin === user.username && passwordLogin == user.password) {
-      window.location.href = "../assets/public/productos.html";
-      isUserValid = true;
+  togglePassword?.addEventListener('click', () => {
+    if (inputPassword.type === 'password') {
+      inputPassword.type = 'text';
+      eyeIcon.classList.add('none');
+      eyeSlashIcon.classList.remove('none');
+    } else {
+      inputPassword.type = 'password';
+      eyeIcon.classList.remove('none');
+      eyeSlashIcon.classList.add('none');
     }
   });
-
-  // Mostramos notificacion del error
-  if (!isUserValid) {
-    ToastrNotification.error("Datos ingresados no corresponden!");
-  }
 });
-*/
 
-// MODAL LOGIN -------------------------------------------------------------------------------------
-const modal = document.getElementById("modal--login");
-const openModalBtn = document.getElementById("btn--open--modal");
-const closeModalBtn = document.getElementById("btn--close--modal");
-
-document.addEventListener("DOMContentLoaded", () => {
-  // Abrir el modal
-  openModalBtn.addEventListener("click", () => {
-    modal.showModal(); // Método nativo para abrir el <dialog>
-  });
-
-  // Cerrar el modal
-  closeModalBtn.addEventListener("click", () => {
-    modal.close(); // Método nativo para cerrar el <dialog>
-  });
-});
+// INICIALIZAR TABLA DE PRODUCTOS ----------------------------------------------------------------
+const pathProducts = '../db/productos_chilenos.json';
+if (document.querySelector('.table--section')) {
+  // Hacer accesible globalmente para el botón de reintentar
+  window.initProducts = initProducts;
+  initProducts.renderProductTable(pathProducts);
+}

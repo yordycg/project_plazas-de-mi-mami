@@ -6,7 +6,7 @@ const validateForm = (formSelector) => {
   // esto hace que el navegador NO VALIDE el formulario
   // con los atributos de validación HTML5
   // - why? no queremos que la validación se ejecute al mismo tiempo
-  formElement.setAttribute('novalidate', '');
+  formElement?.setAttribute('novalidate', '');
 
   // array de objetos que contienen las validaciones aplicadas
   // a cada input del formulario
@@ -134,7 +134,7 @@ const validateForm = (formSelector) => {
 
   // paramos el comportamiento por defecto del formulario
   // al apretar el botón de submit, evitamos que se recargue la página
-  formElement.addEventListener('submit', (event) => {
+  formElement?.addEventListener('submit', (event) => {
     event.preventDefault();
 
     // al hacer 'click' en el botón de submit
