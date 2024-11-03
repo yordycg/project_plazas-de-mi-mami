@@ -1,7 +1,7 @@
 'use strict';
 
 import ToastrNotification from './toastr.js';
-import validateForm from './validationsForm.js';
+import formValidation from './validationsForm.js';
 import { initProducts } from './products.js';
 import modalActions from './modal.js';
 
@@ -26,8 +26,8 @@ modalActions('#modal--update--product');
   - TODO: "empleado" no puede tener acceso a la vista "empleados", quitar del  SIDEBAR
   - TODO: que el boton "reset" del formulario, quite los estilos de validación
 */
-validateForm('#login-form');
-validateForm('#login-form-modal');
+formValidation('#login-form');
+formValidation('#login-form-modal');
 
 // EYE TOGGLE PASSWORD -----------------------------------------------------------------------------
 const passwordContainers = document.querySelectorAll('.password--container');
@@ -51,10 +51,14 @@ passwordContainers.forEach((container) => {
   });
 });
 
-// INICIALIZAR TABLA DE PRODUCTOS ----------------------------------------------------------------
+// INICIALIZAR TABLA DE PRODUCTOS ------------------------------------------------------------------
 const pathProducts = '../db/productos_chilenos.json';
 if (document.querySelector('.table--section')) {
   // Hacer accesible globalmente para el botón de reintentar
   window.initProducts = initProducts;
   initProducts.renderProductTable(pathProducts);
 }
+
+// INICIALIZAR TABLA DE EMPLEADOS ------------------------------------------------------------------
+
+// INICIALIZAR TABLA DE PROVEEDORES ----------------------------------------------------------------

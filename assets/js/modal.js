@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 */
 
-const modalActions = (modalSelector) => {
+export default function modalActions(modalSelector) {
   const modal = document.querySelector(modalSelector);
   const openModalBtn = document.querySelector(`#btn-open-modal`);
   const closeModalBtn = document.querySelector(`#btn-close-modal`);
@@ -34,6 +34,4 @@ const modalActions = (modalSelector) => {
       modal.close();
     });
   });
-};
-
-export default modalActions;
+}

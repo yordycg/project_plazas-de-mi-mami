@@ -1,4 +1,4 @@
-const validateForm = (formSelector) => {
+export default function formValidation(formSelector) {
   // obtenemos el formulario que queremos validar
   const formElement = document.querySelector(formSelector);
 
@@ -33,10 +33,12 @@ const validateForm = (formSelector) => {
     */
     {
       attribute: 'minlength',
+      // comprueba si el input tiene un valor
       // comprueba si el texto tiene al menos los caracteres mínimos
-      isValid: (input) => input.value.length >= input.minLength,
+      isValid: (input) => input.value && input.value.length >= input.minLength,
       errorMessage: (input, label) => `Debe tener al menos ${input.minLength} caracteres`,
     },
+    // * por defecto, la propiedad maxlength no me deja escribir más caracteres
     {
       attribute: 'maxlength',
       // comprueba si el texto no excede el máximo de caracteres
@@ -81,6 +83,37 @@ const validateForm = (formSelector) => {
         errorMessage: (input, label) => `${label.textContent} no está en el rango permitido`
     },
     */
+    {
+      attribute: 'match',
+      /*
+      - obtener el valor del "match" que hace referencia al input#password
+      - buscamos en el formulario un elemento con ese ID
+      - return
+          - verificamos que exista el elemento.
+          - comparamos si son IGUALES los valores de lo 2 elementos  
+      */
+      isValid: (input) => {
+        const matchSelector = input.getAttribute('match');
+        const matchedElement = formElement.querySelector(`#${matchSelector}`);
+
+        return matchedElement && matchedElement.value.trim() === input.value.trim();
+      },
+      /*
+      - obtener el valor del "match" que hace referencia al input#password
+      - buscamos en el formulario un elemento con ese ID
+      - sube 2 niveles para obtener el label del input#password
+      - return
+        - mensaje de error  
+      */
+      errorMessage: (input, label) => {
+        const matchSelector = input.getAttribute('match');
+        const matchedElement = formElement.querySelector(`#${matchSelector}`);
+        const matchedLabel = matchedElement.parentElement.parentElement.querySelector('label');
+
+        // return `${label.textContent} no coincide con ${matchedLabel.textContent}`;
+        return `No coinciden las contraseñas`;
+      },
+    },
   ];
 
   // forma para hacer una validación individual a un div.form--group
@@ -98,7 +131,7 @@ const validateForm = (formSelector) => {
     // recorremos el array de "validationOptions"
     let formGroupError = false;
     for (const option of validationOptions) {
-      // verificar si el input tiene el atributo de validación
+      // * verificar si el input tiene el atributo de validación
       if (inputElement.hasAttribute(option.attribute) && !option.isValid(inputElement)) {
         // mensaje de ERROR
         errorMessageElement.textContent = option.errorMessage(inputElement, labelElement);
@@ -116,7 +149,7 @@ const validateForm = (formSelector) => {
       }
     }
 
-    // si hay un error, no mostrar el icono de éxito
+    // * SI NO HAY ERROR
     if (!formGroupError) {
       // mensaje de ÉXITO
       errorMessageElement.textContent = '';
@@ -153,9 +186,4 @@ const validateForm = (formSelector) => {
       validateSingleFormGroup(formGroup);
     });
   };
-};
-
-// validar login (INDEX.HTML)
-// validateForm("#login--form");
-
-export default validateForm;
+}
