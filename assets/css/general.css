@@ -1,0 +1,463 @@
+/*
+ * --- 01 TYPOGRAPHY SYSTEM
+
+ * - Font sizes (px)
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+ * - Font weights
+  Default: 400
+
+ * - Line heights
+  Default: 1
+
+ * --- 02 COLORS
+
+  - Primary: #.......
+
+  - Tints (Primary dark): #.......
+  - Shades (Primary light): #.......
+  - Accents: #.......
+  - Greys: #.......
+
+ * --- 05 SHADOWS
+
+ * --- 06 BORDER-RADIUS
+
+ * --- 07 WHITESPACE
+
+ * - Spacing System (px)
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/*------------------------------------------------------------------------------------------------*/
+/* VARIABLES CSS */
+/*------------------------------------------------------------------------------------------------*/
+
+:root {
+  --max-width-desktop: 1200px;
+  /*----- COLORS -----*/
+  --primary-color: #134074;
+  --shade--10--color: #113a68;
+  --shade--20--color: #0f335d;
+  --shade--30--color: #0d2d51;
+  --tint--10--color: #2b5382;
+  --tint--20--color: #426690;
+  --gray-color: #d0d9e3;
+  --gray--tint--30--color: #d0d9e330;
+  --black-color: #0b0b0b;
+  --white-color: #fbfbfb;
+  --error-color: #f54135;
+  --warning-color: #fba018;
+  --success-color: #38ce47;
+  --shade--10--success--color: #32b940;
+  --shade--20--success--color: #2da539;
+  --shadow-color: #00000040; /* RGB (0 0 0 / 40%) */
+  /*----- TYPOGRAPHY -----*/
+  --primary-font: "Inter", sans-serif;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/* RESET CSS */
+/*------------------------------------------------------------------------------------------------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 => 62.5% */
+  font-size: 62.5%;
+  font-weight: 400;
+  line-height: 1.5; /* Accesible line-height */
+  font-family: var(--primary-font);
+  background-color: var(--gray-color);
+}
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+/*
+ Hereden las propiedades del elemento padre
+ en lugar de los definidos por el navegador
+*/
+label,
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+h2 {
+  font-size: 2.4rem;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/* UTILITIES */
+/*------------------------------------------------------------------------------------------------*/
+.shadow--1 {
+  box-shadow: var(--shadow-color) 0px 54px 55px, var(--shadow-color) 0px -12px 30px,
+    var(--shadow-color) 0px 4px 6px, var(--shadow-color) 0px 12px 13px,
+    var(--shadow-color) 0px -3px 5px;
+}
+.mt--5 {
+  margin-top: 2.4rem !important;
+}
+.margin--bottom--sm {
+  margin-bottom: 0.8rem;
+}
+.margin--bottom--md {
+  margin-bottom: 1.6rem;
+}
+.ml--2 {
+  margin-left: 0.8rem !important;
+}
+.ml--3 {
+  margin-left: 1.2rem !important;
+}
+.ml--4 {
+  margin-left: 1.6rem !important;
+}
+.ml--5 {
+  margin-left: 2.4rem !important;
+}
+.mr--4 {
+  margin-right: 0.4rem;
+}
+.ml--8 {
+  margin-left: 0.8rem;
+}
+.mr--8 {
+  margin-right: 0.8rem;
+}
+.radius--sm {
+  border-radius: 0.9rem;
+}
+.none {
+  display: none;
+}
+.hidden {
+  visibility: hidden;
+}
+
+/* FLEXBOX ---------------------------------------------------------------------------------------*/
+.center--row {
+  display: flex;
+  align-items: center;
+}
+.center--cols {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* GRID ------------------------------------------------------------------------------------------*/
+.container--grid {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: 80px auto 40px;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer main";
+}
+.grid {
+  display: grid;
+}
+.grid--2--cols {
+  grid-template-columns: 1fr 1fr;
+}
+.grid--3--cols {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid--4--cols {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.grid--6--cols {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+/* GAP -------------------------------------------------------------------------------------------*/
+.gap--1 {
+  gap: 0.4rem;
+}
+.gap--2 {
+  gap: 0.8rem;
+}
+.gap--3 {
+  gap: 1.2rem;
+}
+.gap--4 {
+  gap: 1.6rem;
+}
+.gap--5 {
+  gap: 2.4rem;
+}
+.gap--cols--5 {
+  column-gap: 2.4rem;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border-radius: 1rem;
+}
+.status.equal {
+  background-color: #fba01820;
+  color: var(--warning-color);
+}
+.status.minimum {
+  background-color: #f5413520;
+  color: var(--error-color);
+}
+.status.maximum {
+  background-color: #38ce4720;
+  color: var(--success-color);
+}
+/*------------------------------------------------------------------------------------------------*/
+/* COMPONENTS */
+/*------------------------------------------------------------------------------------------------*/
+/* BUTTONS ---------------------------------------------------------------------------------------*/
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn--full {
+  display: block;
+  width: 100%;
+}
+.btn--icon {
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.2rem;
+}
+.btn--close {
+  background-color: transparent;
+  padding: 0.6rem;
+}
+.btn--link:is(:link, :visited) {
+  text-decoration: none;
+  color: var(--white-color);
+}
+/* .btn--icon--text {
+} */
+.btn--sm {
+  padding: 0.6rem 1.2rem;
+  font-size: 1.4rem;
+}
+.btn--md {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.6rem;
+}
+.btn--lg {
+  padding: 1.2rem 2.4rem;
+  font-size: 1.6rem;
+}
+
+.btn--primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+.btn--primary:is(:hover, :active) {
+  background-color: var(--shade--30--color);
+  /* color: var(--primary-color); */
+  /* box-shadow: inset 0 0 0 2px var(--primary-color);  */
+}
+.btn--outline {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+.btn--outline:is(:hover, :active) {
+  box-shadow: inset 0 0 0 2px var(--primary-color);
+}
+.btn--delete {
+  background-color: var(--error-color);
+  color: var(--white-color);
+}
+.btn--delete:is(:hover, :active) {
+  background-color: var(--white-color);
+  color: var(--error-color);
+  box-shadow: inset 0 0 0 2px var(--error-color);
+}
+.btn--delete--icon {
+  background-color: transparent;
+  color: var(--error-color);
+}
+.btn--delete--icon:is(:hover, :active) {
+  background-color: var(--error-color);
+  color: var(--white-color);
+}
+.btn--update {
+  background-color: transparent;
+  color: var(--warning-color);
+}
+.btn--update:is(:hover, :active) {
+  background-color: var(--warning-color);
+  color: var(--white-color);
+}
+.btn--success {
+  background-color: var(--success-color);
+  color: var(--white-color);
+}
+.btn--success:is(:hover, :active) {
+  background-color: var(--shade--20--success--color);
+}
+
+/* FORM, INPUT, LABEL, SELECT, TEXTAREA ----------------------------------------------------------*/
+.input--disabled {
+  cursor: not-allowed;
+}
+form fieldset {
+  border: none;
+  margin-top: 1.6rem;
+}
+fieldset legend {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+fieldset .form--group:has(.btn) {
+  margin-top: 2.4rem;
+}
+.form--group {
+  /* margin: 0.8rem 0 0; */
+  /* position: relative; */
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  /* min-height: 8.5rem; */
+  margin-bottom: 0.8rem;
+}
+form :is(label, input, select) {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+/* .form--group .form--label { */
+.form--group label {
+  display: block;
+  padding-left: 1.2rem;
+}
+/* .form--group .form--input { */
+.form--group input,
+.form--group select {
+  width: 100%;
+  min-height: 3.6rem;
+  padding: 0.6rem 1.2rem;
+  outline: none;
+  border-radius: 0.6rem;
+  border: 1px solid var(--shadow-color);
+
+  transition: all 0.3s ease;
+}
+/* .form--group .form--input:is(:focus, :focus-visible) { */
+.form--group input:is(:focus, :focus-visible)
+.form--group select:is(:focus, :focus-visible) {
+  border-color: var(--tint--10--color);
+  outline: 0.2rem solid transparent;
+  outline-offset: 0.2rem;
+}
+/* .form--group input:is(:invalid) {
+  border-color: var(--error-color);
+} */
+.form--group {
+  grid-column: span 3;
+}
+.form--group:first-of-type {
+  grid-column: 1 / span 3;
+}
+.form--group:has(.btn) {
+  place-self: center;
+}
+
+.form--validation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 0 1.2rem;
+  min-height: 2.3rem;
+}
+.form--validation i {
+  font-size: 1.4rem;
+}
+.error--message {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1rem;
+  color: var(--error-color);
+}
+.error--icon {
+  color: var(--error-color);
+}
+.success--icon {
+  color: var(--success-color);
+}
+.border--error {
+  border-color: var(--error-color) !important;
+}
+.border--success {
+  border-color: var(--success-color) !important;
+}
+
+.password--container {
+  position: relative;
+}
+.password--toggle {
+  position: absolute;
+  top: 50%;
+  right: 1.2rem;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.6rem;
+
+  display: flex;
+  align-items: center;
+}
+
+/* LOADER ---------------------------------------------------------------------------------------*/
+.loader--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 2rem;
+}
+.loader--container p {
+  font-size: 1.6rem;
+}
+.loader {
+  width: 45px;
+  height: 45px;
+  border: 5px solid var(--primary-color);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

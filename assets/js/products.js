@@ -1,4 +1,4 @@
-export const renderProductTable = async (pathjson) => {
+export const renderProductTable = async (pathJson) => {
   const tableSection = document.querySelector('.table--section');
 
   // Mostrar loader
@@ -9,7 +9,7 @@ export const renderProductTable = async (pathjson) => {
     await new Promise((resolve) => setTimeout(resolve, 10000));
 
     // const response = await fetch('./assets/db/productos_chilenos.json');
-    const response = await fetch(pathjson);
+    const response = await fetch(pathJson);
     if (!response.ok) throw new Error('No se pudo cargar los datos');
 
     const data = await response.json();
@@ -68,7 +68,7 @@ const showErrorMessage = (container) => {
     //   <i class="bi bi-exclamation-triangle-fill"></i>
     //   <p>No se pudo cargar la tabla de productos</p>
     //   <button class="btn btn--primary" onclick="window.initProducts.renderProductTable()">
-    //     Reintentar
+    //     Intentar Nuevamente
     //   </button>
     // </div>
     <div class="error-message">
