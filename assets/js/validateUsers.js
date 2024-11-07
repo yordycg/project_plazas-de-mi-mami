@@ -14,7 +14,7 @@ const validUsers = [
 export default function validateUsers() {
   const formLogin = document.querySelector('#login-form');
 
-  formLogin.addEventListener('submit', (e) => {
+  formLogin?.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const usernameLogin = document.querySelector('#username-login').value;
