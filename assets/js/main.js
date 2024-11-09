@@ -4,6 +4,7 @@ import formValidation from './validationsForm.js';
 import { initProducts } from './products.js';
 import modalActions from './modal.js';
 import validateUsers from './validateUsers.js';
+import toggleSidebar from './sidebar.js';
 
 /// VALIDAR UN USUARIO EN LOGIN --------------------------------------------------------------------
 validateUsers();
@@ -20,6 +21,9 @@ modalActions('#modal--update--product');
 */
 formValidation('#login-form');
 formValidation('#login-form-modal');
+
+// TOGGLE SIDEBAR ---------------------------------------------------------------------------------
+toggleSidebar();
 
 // EYE TOGGLE PASSWORD -----------------------------------------------------------------------------
 const passwordContainers = document.querySelectorAll('.password--container');

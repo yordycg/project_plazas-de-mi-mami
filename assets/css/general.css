@@ -145,6 +145,9 @@ h2 {
 .hidden {
   visibility: hidden;
 }
+.rotate svg:last-child{
+  rotate: 180deg;
+}
 
 /* FLEXBOX ---------------------------------------------------------------------------------------*/
 .center--row {
@@ -169,6 +172,7 @@ h2 {
     "header header"
     "sidebar main"
     "footer main";
+  transition: grid-template-columns 0.3s ease-in-out;
 }
 .grid {
   display: grid;
@@ -249,12 +253,27 @@ h2 {
   background-color: transparent;
   padding: 0.6rem;
 }
+.btn--toggle {
+  /* margin-left: auto; */
+  padding: 1.4rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: none;
+  cursor: pointer;
+
+  color: var(--white-color);
+
+  svg{
+    transition: rotate 0.4s ease;
+  }
+}
+.btn--toggle:hover {
+  background-color: var(--shade--20--color);
+}
 .btn--link:is(:link, :visited) {
   text-decoration: none;
   color: var(--white-color);
 }
-/* .btn--icon--text {
-} */
 .btn--sm {
   padding: 0.6rem 1.2rem;
   font-size: 1.4rem;
