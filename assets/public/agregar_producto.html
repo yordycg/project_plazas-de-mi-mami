@@ -178,11 +178,11 @@
           -->
 
           <form class="form--add--product" method="post">
-            <div class="form--group">
+            <div class="form--group grid--full--width">
               <label for="product-name" class="form--label">Nombre del producto</label>
               <input id="product-name" class="form--input" type="text" name="product_name" />
             </div>
-            <div class="form--group"></div>
+            <!-- <div class="form--group"></div> -->
             <div class="form--group">
               <label for="product-sale" class="form--label">Precio de venta</label>
               <input id="product-sale" class="form--input" type="number" name="product_sale" />
@@ -226,7 +226,7 @@
                 <option value="4">Litros (lt)</option>
               </select>
             </div>
-            <div class="form--group">
+            <div class="form--group grid--full--width">
               <label for="product-brand" class="form--label">Marca:</label>
               <select id="product-brand" class="form--input" name="product_brand">
                 <option value="" disabled selected>Tipo de marca ...</option>
@@ -237,7 +237,13 @@
                 <option value="Tucapel">Tucapel</option>
               </select>
             </div>
-            <div class="form--group"></div>
+            <div class="form--group grid--full--width">
+              <label for="product-description" class="form--label">Descripción</label>
+              <textarea
+                id="product-description"
+                class="form--input"
+                name="product_description"></textarea>
+            </div>
             <div class="form--group mt--5">
               <button type="reset" class="btn btn--delete radius--sm">
                 <i class="bi bi-eraser-fill"></i>
