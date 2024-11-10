@@ -71,46 +71,46 @@
       </header>
 
       <!-- ----------- SIDEBAR ----------- -->
-
       <aside class="sidebar--section">
-        <hr />
-        <search class="search container--row">
-          <input class="search--bar" placeholder="Leche ..." autocomplete="off" type="text" />
-          <div class="search--icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-search"
-              viewBox="0 0 16 16">
-              <path
-                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-            </svg>
-          </div>
-          <button class="btn--search">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-arrow-right-short"
-              viewBox="0 0 16 16">
-              <path
-                fill-rule="evenodd"
-                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-            </svg>
-          </button>
-          <div class="search--result"></div>
-        </search>
-
-        <hr />
-
         <!-- ----------- NAVBAR ----------- -->
 
         <nav class="nav--main">
           <ul class="nav--main--list">
             <li>
+              <button id="toggle-btn" class="btn--toggle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-bar-left"
+                  viewBox="0 0 16 16">
+                  <path
+                    fill-rule="evenodd"
+                    d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5" />
+                </svg>
+              </button>
+            </li>
+            <li>
+              <search class="search container--row">
+                <div class="search--icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                  </svg>
+                </div>
+                <input class="search--bar" placeholder="Buscar..." autocomplete="off" type="text" />
+                <!-- TODO: hacer que el resultado de la búsqueda se muestre aquí -->
+                <div class="search--result"></div>
+              </search>
+            </li>
+            <li class="active">
               <a class="nav--main--link center--row gap--4" href="../public/productos.html">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
