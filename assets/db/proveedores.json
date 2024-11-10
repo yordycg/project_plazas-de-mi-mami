@@ -1,0 +1,198 @@
+[
+  {
+    "rut_empresa": "76.123.456-1",
+    "nombre_empresa": "Comercial Los Andes",
+    "direccion_empresa": "Av. Los Pajaritos 1234, Santiago",
+    "telefono_empresa": "+56 2 2345 6789",
+    "email_empresa": "contacto@comercialesandes.cl",
+    "contacto": {
+      "nombres": "Juan",
+      "apellido_1": "Pérez",
+      "apellido_2": "Soto",
+      "telefono": "+56 9 8765 4321",
+      "email": "jperez@comercialesandes.cl"
+    }
+  },
+  {
+    "rut_empresa": "78.987.654-2",
+    "nombre_empresa": "Distribuidora El Sol",
+    "direccion_empresa": "Calle Larga 456, Valparaíso",
+    "telefono_empresa": "+56 32 234 5678",
+    "email_empresa": "info@distribuidoraelsol.cl",
+    "contacto": {
+      "nombres": "Claudia",
+      "apellido_1": "González",
+      "apellido_2": "Rojas",
+      "telefono": "+56 9 8765 4322",
+      "email": "cgonzalez@distribuidoraelsol.cl"
+    }
+  },
+  {
+    "rut_empresa": "79.321.123-3",
+    "nombre_empresa": "Suministros Bio Bio",
+    "direccion_empresa": "Avenida Colón 789, Concepción",
+    "telefono_empresa": "+56 41 278 9101",
+    "email_empresa": "ventas@suministrosbiobio.cl",
+    "contacto": {
+      "nombres": "Carlos",
+      "apellido_1": "Fuentes",
+      "apellido_2": "Mora",
+      "telefono": "+56 9 8765 4323",
+      "email": "cfuentes@suministrosbiobio.cl"
+    }
+  },
+  {
+    "rut_empresa": "80.654.321-4",
+    "nombre_empresa": "Insumos del Norte",
+    "direccion_empresa": "Alameda Central 1010, Antofagasta",
+    "telefono_empresa": "+56 55 232 1011",
+    "email_empresa": "contacto@insumosdelnorte.cl",
+    "contacto": {
+      "nombres": "Marcela",
+      "apellido_1": "Orellana",
+      "apellido_2": "Guzmán",
+      "telefono": "+56 9 8765 4324",
+      "email": "morellana@insumosdelnorte.cl"
+    }
+  },
+  {
+    "rut_empresa": "75.678.123-5",
+    "nombre_empresa": "Proveedora Maipo",
+    "direccion_empresa": "Camino a Melipilla 2020, Santiago",
+    "telefono_empresa": "+56 2 2789 1011",
+    "email_empresa": "ventas@proveedoramaipo.cl",
+    "contacto": {
+      "nombres": "Francisco",
+      "apellido_1": "Carrasco",
+      "apellido_2": "López",
+      "telefono": "+56 9 8765 4325",
+      "email": "fcarrasco@proveedoramaipo.cl"
+    }
+  },
+  {
+    "rut_empresa": "81.321.987-6",
+    "nombre_empresa": "Importadora del Sur",
+    "direccion_empresa": "Av. Independencia 3030, Osorno",
+    "telefono_empresa": "+56 64 232 1012",
+    "email_empresa": "info@importadoradelsur.cl",
+    "contacto": {
+      "nombres": "Andrea",
+      "apellido_1": "Navarrete",
+      "apellido_2": "Espinoza",
+      "telefono": "+56 9 8765 4326",
+      "email": "anavarrete@importadoradelsur.cl"
+    }
+  },
+  {
+    "rut_empresa": "77.567.890-7",
+    "nombre_empresa": "Ferretería Central",
+    "direccion_empresa": "Calle Comercio 101, Santiago",
+    "telefono_empresa": "+56 2 2314 5678",
+    "email_empresa": "ventas@ferreteriacentral.cl",
+    "contacto": {
+      "nombres": "Jorge",
+      "apellido_1": "Reyes",
+      "apellido_2": "Castillo",
+      "telefono": "+56 9 8765 4327",
+      "email": "jreyes@ferreteriacentral.cl"
+    }
+  },
+  {
+    "rut_empresa": "89.101.112-8",
+    "nombre_empresa": "Agrícola del Valle",
+    "direccion_empresa": "Ruta 5 Sur km 20, Rancagua",
+    "telefono_empresa": "+56 72 345 6789",
+    "email_empresa": "info@agricoladelvalle.cl",
+    "contacto": {
+      "nombres": "Camila",
+      "apellido_1": "Salinas",
+      "apellido_2": "Figueroa",
+      "telefono": "+56 9 8765 4328",
+      "email": "csalinas@agricoladelvalle.cl"
+    }
+  },
+  {
+    "rut_empresa": "92.345.678-9",
+    "nombre_empresa": "Tecnología Austral",
+    "direccion_empresa": "Av. Sur 400, Punta Arenas",
+    "telefono_empresa": "+56 61 234 5678",
+    "email_empresa": "contacto@tecnologiaustral.cl",
+    "contacto": {
+      "nombres": "Diego",
+      "apellido_1": "Poblete",
+      "apellido_2": "Molina",
+      "telefono": "+56 9 8765 4329",
+      "email": "dpoblete@tecnologiaustral.cl"
+    }
+  },
+  {
+    "rut_empresa": "83.456.789-0",
+    "nombre_empresa": "Electro Sur",
+    "direccion_empresa": "Av. Norte 789, Chillán",
+    "telefono_empresa": "+56 42 234 5678",
+    "email_empresa": "ventas@electrosur.cl",
+    "contacto": {
+      "nombres": "Tamara",
+      "apellido_1": "Araya",
+      "apellido_2": "Olivares",
+      "telefono": "+56 9 8765 4330",
+      "email": "taraya@electrosur.cl"
+    }
+  },
+  {
+    "rut_empresa": "85.678.123-1",
+    "nombre_empresa": "Logística & Transporte",
+    "direccion_empresa": "Av. Esmeralda 2233, La Serena",
+    "telefono_empresa": "+56 51 234 5678",
+    "email_empresa": "contacto@logistrans.cl",
+    "contacto": {
+      "nombres": "Ricardo",
+      "apellido_1": "Urrutia",
+      "apellido_2": "Saavedra",
+      "telefono": "+56 9 8765 4331",
+      "email": "rurrutia@logistrans.cl"
+    }
+  },
+  {
+    "rut_empresa": "94.123.567-2",
+    "nombre_empresa": "Envases del Centro",
+    "direccion_empresa": "Av. Santa Rosa 1221, Santiago",
+    "telefono_empresa": "+56 2 2234 5678",
+    "email_empresa": "info@envasescentro.cl",
+    "contacto": {
+      "nombres": "Patricia",
+      "apellido_1": "Zamora",
+      "apellido_2": "Acuña",
+      "telefono": "+56 9 8765 4332",
+      "email": "pzamora@envasescentro.cl"
+    }
+  },
+  {
+    "rut_empresa": "84.234.567-3",
+    "nombre_empresa": "Distribución Nacional",
+    "direccion_empresa": "Av. Norte 4512, Talca",
+    "telefono_empresa": "+56 71 234 5678",
+    "email_empresa": "contacto@distribucionnacional.cl",
+    "contacto": {
+      "nombres": "Rodrigo",
+      "apellido_1": "Vega",
+      "apellido_2": "Alarcón",
+      "telefono": "+56 9 8765 4333",
+      "email": "rvega@distribucionnacional.cl"
+    }
+  },
+  {
+    "rut_empresa": "93.567.890-4",
+    "nombre_empresa": "Comercial Patagónica",
+    "direccion_empresa": "Camino Austral 990, Coyhaique",
+    "telefono_empresa": "+56 67 234 5678",
+    "email_empresa": "ventas@comercialpatagonica.cl",
+    "contacto": {
+      "nombres": "Mónica",
+      "apellido_1": "Paredes",
+      "apellido_2": "Soto",
+      "telefono": "+56 9 8765 4334",
+      "email": "mparedes@comercialpatagonica.cl"
+    }
+  }
+]
