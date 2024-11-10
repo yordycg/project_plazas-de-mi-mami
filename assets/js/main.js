@@ -53,7 +53,7 @@ const pathEmployees = '../db/empleados.json';
 const pathProviders = '../db/proveedores.json';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // INICIALIZAR TABLA DE PRODUCTOS ------------------------------------------------------------
+  // INICIALIZAR TABLA DE PRODUCTOS -----------------------------------------------------------
   renderProductTable(pathProducts);
 
   // INICIALIZAR TABLA DE EMPLEADOS ------------------------------------------------------------

@@ -384,7 +384,7 @@ dialog::backdrop {
 .main--section section:has(form) {
   flex-grow: 1;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 /* MAIN SECTION WITH TABLE -----------------------------------------------------------------------*/
