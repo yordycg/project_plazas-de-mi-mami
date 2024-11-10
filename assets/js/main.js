@@ -1,7 +1,7 @@
 'use strict';
 
 import formValidation from './validationsForm.js';
-import { initProducts } from './products.js';
+import { renderEmployeeTable, renderProviderTable, renderProductTable } from './renderTables.js';
 import modalActions from './modal.js';
 import validateUsers from './validateUsers.js';
 import toggleSidebar from './sidebar.js';
@@ -47,14 +47,18 @@ passwordContainers.forEach((container) => {
   });
 });
 
-// INICIALIZAR TABLA DE PRODUCTOS ------------------------------------------------------------------
+// INICIALIZAR TABLAS ------------------------------------------------------------------------------
 const pathProducts = '../db/productos_chilenos.json';
-if (document.querySelector('.table--section')) {
-  // Hacer accesible globalmente para el botón de intentar nuevamente
-  window.initProducts = initProducts;
-  initProducts.renderProductTable(pathProducts);
-}
+const pathEmployees = '../db/empleados.json';
+const pathProviders = '../db/proveedores.json';
 
-// INICIALIZAR TABLA DE EMPLEADOS ------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
+  // INICIALIZAR TABLA DE PRODUCTOS ------------------------------------------------------------
+  renderProductTable(pathProducts);
 
-// INICIALIZAR TABLA DE PROVEEDORES ----------------------------------------------------------------
+  // INICIALIZAR TABLA DE EMPLEADOS ------------------------------------------------------------
+  renderEmployeeTable(pathEmployees);
+
+  // INICIALIZAR TABLA DE PROVEEDORES -----------------------------------------------------------
+  renderProviderTable(pathProviders);
+});
