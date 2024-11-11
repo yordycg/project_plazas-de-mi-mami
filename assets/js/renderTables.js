@@ -3,7 +3,7 @@ async function renderEmployeeTable(pathJson) {
   const tableSection = document.querySelector('.table--section--employees');
 
   // Mostrar loader
-  showLoader(tableSection);
+  showLoader(tableSection, 'empleados');
 
   try {
     await new Promise((resolve) => setTimeout(resolve, 3000));
@@ -78,7 +78,7 @@ async function renderProviderTable(pathJson) {
   const tableSection = document.querySelector('.table--section--providers');
 
   // Mostrar loader
-  showLoader(tableSection);
+  showLoader(tableSection, 'proveedores');
 
   try {
     await new Promise((resolve) => setTimeout(resolve, 3000));
@@ -154,7 +154,7 @@ async function renderProductTable(pathJson) {
   const tableSection = document.querySelector('.table--section--products');
 
   // Mostrar loader
-  showLoader(tableSection);
+  showLoader(tableSection, 'productos');
 
   try {
     await new Promise((resolve) => setTimeout(resolve, 5000));
@@ -232,11 +232,11 @@ const renderProductTableContent = (productos, container) => {
 };
 
 // LOADER ------------------------------------------------------------------------------------------
-const showLoader = (container) => {
+const showLoader = (container, nameTable) => {
   container.innerHTML = `
     <div class="loader--container">
       <div class="loader"></div>
-      <p>Cargando productos...</p>
+      <p>Cargando ${nameTable}...</p>
     </div>
   `;
 };
