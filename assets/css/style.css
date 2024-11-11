@@ -165,18 +165,18 @@ dialog::backdrop {
   width: 2.4rem;
   height: 2.4rem;
 }
-.sidebar--section.close{
-  padding: .5rem;
+.sidebar--section.close {
+  padding: 0.5rem;
   width: 6rem;
   overflow: hidden; /*para ocultar la barra de desplazamiento*/
 }
 
 /* Ocultar el span del footer -------------------------------------------------------------------*/
-.footer--section.close{
-  padding: .5rem;
+.footer--section.close {
+  padding: 0.5rem;
   width: 6rem;
 }
-.sidebar--section.close ~ .footer--section span{
+.sidebar--section.close ~ .footer--section span {
   display: none;
 }
 
@@ -239,7 +239,7 @@ dialog::backdrop {
 .search {
   position: relative;
 }
-.search svg{
+.search svg {
   position: absolute;
   top: 50%;
   left: 1.4rem;
@@ -247,12 +247,13 @@ dialog::backdrop {
   z-index: 2;
 
   pointer-events: none;
+  color: var(--primary-color);
 }
-.search input{
+.search input {
   background-color: var(--gray-color);
   width: 100%;
   color: var(--black-color);
-  border-radius: .8rem;
+  border-radius: 0.8rem;
   padding: 1.4rem;
   padding-left: 5.4rem;
   font-size: 1.6rem;
@@ -270,7 +271,6 @@ dialog::backdrop {
 .sidebar--section.close ~ .search svg {
   display: none;
 }
-
 
 /*------------------------------------------------------------------------------------------------*/
 /* NAVBAR */
@@ -307,15 +307,15 @@ dialog::backdrop {
   background-color: var(--shade--20--color);
 }
 */
-.nav--main--list{
+.nav--main--list {
   list-style: none;
 }
-.nav--main--list li:first-child{
+.nav--main--list li:first-child {
   display: flex;
   justify-content: flex-end;
 }
-.nav--main--list a{
-  border-radius: .8rem;
+.nav--main--list a {
+  border-radius: 0.8rem;
   padding: 1.4rem;
   text-decoration: none;
   color: var(--white-color);
@@ -326,13 +326,13 @@ dialog::backdrop {
   align-items: center;
   gap: 1.6rem;
 }
-.nav--main--list a:hover{
+.nav--main--list a:hover {
   background-color: var(--shade--20--color);
 }
-.nav--main--list a svg{
+.nav--main--list a svg {
   flex-shrink: 0;
 }
-.nav--main--list a span{
+.nav--main--list a span {
   flex-grow: 1;
 }
 
@@ -386,13 +386,13 @@ dialog::backdrop {
   display: flex;
   align-items: center;
 }
-.search--form--box .form--group{
+.search--form--box .form--group {
   margin: 0;
 }
 
 .main--header--buttons {
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: flex-end;
   gap: 1.6rem;
 }
 
@@ -501,7 +501,7 @@ tbody tr:hover {
 }
 .footer--section {
   grid-column: 1;
-  grid-row: 3;  
+  grid-row: 3;
   position: sticky;
   bottom: 0;
   height: 4rem;
