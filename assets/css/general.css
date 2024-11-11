@@ -164,15 +164,23 @@ h2 {
 /* GRID ------------------------------------------------------------------------------------------*/
 .container--grid {
   min-height: 100vh;
+  max-height: 100vh;
 
   display: grid;
+  /*
   grid-template-columns: 280px 1fr;
   grid-template-rows: 80px auto 40px;
   grid-template-areas:
     "header header"
     "sidebar main"
     "footer main";
+  */
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
+
+  position: relative;
   transition: grid-template-columns 0.3s ease-in-out;
+  overflow: hidden;
 }
 .grid {
   display: grid;
