@@ -165,47 +165,72 @@
 
         <section>
           <form class="form--add--provider" method="post">
-            <div class="form--group">
-              <label for="provider-name" class="form--label">Nombre del proveedor</label>
-              <input id="provider-name" class="form--input" type="text" name="provider_name" />
-            </div>
-            <div class="form--group">
-              <label for="provider-contact" class="form--label">Nombre del contacto</label>
-              <input
-                id="provider-contact"
-                class="form--input"
-                type="text"
-                name="provider_contact" />
-            </div>
-            <div class="form--group">
-              <label for="provider-phone" class="form--label">Teléfono</label>
-              <input id="provider-phone" class="form--input" type="text" name="provider_phone" />
-            </div>
-            <div class="form--group">
-              <label for="provider-email" class="form--label">Email</label>
-              <input id="provider-email" class="form--input" type="text" name="provider_email" />
-            </div>
-            <div class="form--group">
-              <label for="provider-address" class="form--label">Dirección</label>
-              <input
-                id="provider-address"
-                class="form--input"
-                type="text"
-                name="provider_address" />
-            </div>
-            <!-- TODO: div ayuda para colocar en orden el formulario -->
-            <div class="form--group"></div>
-            <div class="form--group">
-              <button type="reset" class="btn btn--delete radius--sm">
-                <i class="bi bi-eraser-fill"></i>
-                Limpiar
-              </button>
-            </div>
-            <div class="form--group">
-              <button class="btn btn--success radius--sm">
-                <i class="bi bi-bag-plus-fill mr--4"></i>
-                Agregar
-              </button>
+            <fieldset class="grid grid--6--cols gap--cols--5">
+              <legend>Información de la Empresa</legend>
+              <div class="form--group">
+                <label for="provider-name-company">Nombre de la Empresa</label>
+                <input id="provider-name-company" type="text" name="provider_name_company" />
+              </div>
+              <div class="form--group">
+                <label for="provider-rut">Rut Empresa</label>
+                <input id="provider-rut" type="text" name="provider_rut" />
+              </div>
+              <div class="form--group grid--full--width">
+                <label for="provider-address">Dirección Empresa</label>
+                <input id="provider-address" type="text" name="provider_address" />
+              </div>
+              <div class="form--group">
+                <label for="provider-phone">Teléfono Empresa</label>
+                <input id="provider-phone" type="text" name="provider_phone" />
+              </div>
+              <div class="form--group">
+                <label for="provider-email">Email Empresa</label>
+                <input id="provider-email" type="text" name="provider_email" />
+              </div>
+            </fieldset>
+            <fieldset class="grid grid--6--cols gap--cols--5">
+              <legend>Información del Contacto</legend>
+              <div class="form--group grid--full--width">
+                <label for="provider-contact-name">Nombres del Contacto</label>
+                <input id="provider-contact-names" type="text" name="provider_contact_names" />
+              </div>
+              <div class="form--group">
+                <label for="provider-contact-first-last-name">Primer Apellido</label>
+                <input
+                  id="provider-contact-first-last-name"
+                  type="text"
+                  name="provider_contact_first_last_name" />
+              </div>
+              <div class="form--group">
+                <label for="provider-contact-second-last-name">Segundo Apellido</label>
+                <input
+                  id="provider-contact-second-last-name"
+                  type="text"
+                  name="provider_contact_second_last_name" />
+              </div>
+              <div class="form--group">
+                <label for="provider-contact-phone">Teléfono Contacto</label>
+                <input id="provider-contact-phone" type="text" name="provider_contact_phone" />
+              </div>
+              <div class="form--group">
+                <label for="provider-contact-email">Email Contacto</label>
+                <input id="provider-contact-email" type="text" name="provider_contact_email" />
+              </div>
+            </fieldset>
+            <!-- TODO: hacer que cada boton esten en columnas diferentes -->
+            <div class="grid grid--2--cols">
+              <div class="form--group">
+                <button type="reset" class="btn btn--delete radius--sm">
+                  <i class="bi bi-eraser-fill"></i>
+                  Limpiar
+                </button>
+              </div>
+              <div class="form--group">
+                <button class="btn btn--success radius--sm">
+                  <i class="bi bi-bag-plus-fill mr--4"></i>
+                  Agregar
+                </button>
+              </div>
             </div>
           </form>
         </section>

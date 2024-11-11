@@ -446,9 +446,8 @@ tbody tr:hover {
   background-color: #fbfbfb90;
 }
 
-/* FORM ADD PRODUCT - PROVIDER -------------------------------------------------------------------*/
-.form--add--product,
-.form--add--provider {
+/* FORM ADD PRODUCT ------------------------------------------------------------------------------*/
+.form--add--product {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   column-gap: 2.4rem;
@@ -457,7 +456,8 @@ tbody tr:hover {
   /* margin: 0 auto; */
 }
 
-/* FORM ADD EMPLOYEE -----------------------------------------------------------------------------*/
+/* FORM ADD PROVIDER - EMPLOYEE ------------------------------------------------------------------*/
+.form--add--provider,
 .form--add--employee {
   max-width: 70rem;
   /* margin: 0 auto; */
