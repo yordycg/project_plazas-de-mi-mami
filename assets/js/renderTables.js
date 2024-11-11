@@ -1,6 +1,7 @@
 // TABLA EMPLEADOS ---------------------------------------------------------------------------------
 async function renderEmployeeTable(pathJson) {
   const tableSection = document.querySelector('.table--section--employees');
+  if (!tableSection) return;
 
   // Mostrar loader
   showLoader(tableSection, 'empleados');
@@ -76,6 +77,7 @@ const renderEmployeeTableContent = (empleados, container) => {
 // TABLA PROVEEDORES -------------------------------------------------------------------------------
 async function renderProviderTable(pathJson) {
   const tableSection = document.querySelector('.table--section--providers');
+  if (!tableSection) return;
 
   // Mostrar loader
   showLoader(tableSection, 'proveedores');
@@ -152,6 +154,7 @@ const renderProviderTableContent = (proveedores, container) => {
 // TABLA PRODUCTOS ---------------------------------------------------------------------------------
 async function renderProductTable(pathJson) {
   const tableSection = document.querySelector('.table--section--products');
+  if (!tableSection) return;
 
   // Mostrar loader
   showLoader(tableSection, 'productos');

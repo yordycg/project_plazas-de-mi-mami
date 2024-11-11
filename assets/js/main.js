@@ -6,9 +6,6 @@ import modalActions from './modal.js';
 import validateUsers from './validateUsers.js';
 import toggleSidebar from './sidebar.js';
 
-/// VALIDAR UN USUARIO EN LOGIN --------------------------------------------------------------------
-validateUsers();
-
 // MODALES -----------------------------------------------------------------------------------------
 modalActions('#modal-login');
 modalActions('#modal--update--product');
@@ -19,6 +16,7 @@ modalActions('#modal--update--product');
   - TODO: "empleado" no puede tener acceso a la vista "empleados", quitar del  SIDEBAR
   - TODO: que el botón "reset" del formulario, quite los estilos de validación
 */
+validateUsers();
 formValidation('#login-form');
 formValidation('#login-form-modal');
 
