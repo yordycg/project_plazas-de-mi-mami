@@ -5,6 +5,7 @@ import { renderEmployeeTable, renderProviderTable, renderProductTable } from './
 import modalActions from './modal.js';
 import validateUsers from './validateUsers.js';
 import toggleSidebar from './sidebar.js';
+import toggleFilters from './filters.js';
 
 // MODALES -----------------------------------------------------------------------------------------
 modalActions('#modal-login');
@@ -22,6 +23,9 @@ formValidation('#login-form-modal');
 
 // TOGGLE SIDEBAR ---------------------------------------------------------------------------------
 toggleSidebar();
+
+// TOGGLE FILTERS ---------------------------------------------------------------------------------
+toggleFilters();
 
 // EYE TOGGLE PASSWORD -----------------------------------------------------------------------------
 const passwordContainers = document.querySelectorAll('.password--container');
