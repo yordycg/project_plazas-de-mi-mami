@@ -117,6 +117,7 @@ Desktop Large: >= 1201px
   /* Container Grid */
   .container--grid {
     grid-template-columns: 6rem 1fr;
+    position: relative;
   }
 
   /* Header */
@@ -125,15 +126,49 @@ Desktop Large: >= 1201px
   }
 
   /* Sidebar */
+  /* sidebar y footer */
+  .sidebar--section,
+  .footer--section {
+    width: 6rem ;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* sidebar especifico */
   .sidebar--section {
-    width: 6rem;
+    padding: .5rem;
+    /* overflow: hidden; */
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100vh - 6.4rem - 4.8rem);
+  }
+
+  /* estado del sidebar y footer al quitar .close */
+  .sidebar--section:not(.close),
+  .footer--section:not(.close) {
+    width: 24rem;
   }
 
   .nav--main--link span,
-  .search--bar {
-    display: none; /* Oculta textos en sidebar */
+  .footer--section span {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
   }
 
+  .sidebar--section:not(.close) .nav--main--link span,
+  .footer--section:not(.close) span {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Main */
+  .main--section {
+    position: relative;
+    z-index: 1;
+  }
 
   /* Filtros */
   .search--filters {
@@ -183,6 +218,14 @@ Desktop Large: >= 1201px
     padding: 0.8rem;
   }
 
+  /* Footer */
+  /* footer especifico */
+  .footer--section {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
   /* Ocultar el span del footer */
   .footer--section span {
     display: none;
@@ -194,59 +237,26 @@ Desktop Large: >= 1201px
 /* MOBILE (<= 480px) */
 /*------------------------------------------------------------------------------------------------*/
 @media (width <= 480px) {
-  /* Container Grid */
+  /* Container Grid - ocupar todo el ancho */
   .container--grid {
     grid-template-columns: 1fr;
   }
 
-  /* Header */
-  .header--section {
-    padding: 1rem;
+  /* Ocultar sidebar y footer por defecto */
+  .sidebar--section,
+  .footer--section {
+    display: none;
   }
 
-  /* Sidebar */
-  .sidebar--section {
-    display: none; /* Oculta sidebar en móvil */
-  }
-
-  /* Main Section */
+  /* Main section - ocupar todo el ancho */
   .main--section {
-    padding: 1.2rem;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  /* Filtros */
-  .search--filters select,
-  .search--filters input {
+    grid-column: 1;
     width: 100%;
   }
 
-  .main--header--buttons {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  /* Tabla */
-  .table--section--products {
-    overflow-x: auto;
-  }
-
-  /* Modal */
-  dialog {
-    width: 90%;
-    padding: 1.6rem;
-  }
-
-  dialog form {
-    gap: 1.2rem;
-  }
-
-  .form--actions {
-    flex-direction: column;
-    gap: 1rem;
+  /* Header siempre visible */
+  .header--section {
+    padding: 0 3.2rem;
   }
 }
 
@@ -274,35 +284,19 @@ Desktop Large: >= 1201px
   }
 }
 
-/* Definir el contenedor */
-.main--section header{
-  container-type: inline-size;
-  container-name: header;
+
+
+@media (width <= 730px) {
+  .search--filters #btn-filter span {
+    display: none !important;
+  }
+  
+  .search--filters #btn-filter i {
+    margin-right: 0 !important;
+  }
 }
 
-/* Container Query */
-@container header (width <= 1155px) {
-  /* Oculta el texto de los botones específicos */
-  .btn--success span,
-  .btn--delete span {
-    display: none;
-  }
-  .main--section header .btn--primary span{
-    display: none;
-  }
 
-  /* Ajusta el padding de los botones */
-  .btn-add,
-  .btn-delete,
-  .btn-filter {
-    padding: 0.8rem;
-    min-width: auto;
-  }
 
-  /* Centra los iconos */
-  .btn-add i,
-  .btn-delete i,
-  .btn-filter i {
-    margin: 0;
-  }
-}
+
+
