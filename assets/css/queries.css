@@ -241,11 +241,46 @@ Desktop Large: >= 1201px
     grid-template-columns: 1fr;
   }
 
-  /* Ocultar sidebar y footer por defecto */
+  /* Sidebar y footer por defecto */
   .sidebar--section,
   .footer--section {
-    display: none;
+    position: fixed;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
   }
+  .sidebar--section{
+    top: 64px;
+  }
+
+  /* Mostrar sidebar/footer cuando se active */
+  .sidebar--section.show,
+  .footer--section.show {
+    transform: translateX(0);
+  }
+
+  /* Estilos botón ocultar sidebar/footer */
+  .toggle--sidebar--btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1001;
+    padding: 1.2rem;
+    cursor: pointer;
+
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0.4rem 1.2rem var(--shadow-color);
+    font-size: 2rem;
+  }
+
 
   /* Main section - ocupar todo el ancho */
   .main--section {
@@ -256,6 +291,13 @@ Desktop Large: >= 1201px
   /* Header siempre visible */
   .header--section {
     padding: 0 3.2rem;
+  }
+}
+
+/* Ocultar sidebar/footer en dispositivos mobile */
+@media (width > 480px) {
+  .toggle-sidebar-btn {
+    display: none;
   }
 }
 

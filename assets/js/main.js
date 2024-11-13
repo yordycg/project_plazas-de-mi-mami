@@ -4,7 +4,7 @@ import formValidation from './validationsForm.js';
 import { renderEmployeeTable, renderProviderTable, renderProductTable } from './renderTables.js';
 import modalActions from './modal.js';
 import validateUsers from './validateUsers.js';
-import toggleSidebar from './sidebar.js';
+import { toggleSidebar } from './sidebar.js';
 import toggleFilters from './filters.js';
 
 // MODALES -----------------------------------------------------------------------------------------
@@ -23,6 +23,7 @@ formValidation('#login-form-modal');
 
 // TOGGLE SIDEBAR ---------------------------------------------------------------------------------
 toggleSidebar();
+// toggleMobileSidebar();
 
 // TOGGLE FILTERS ---------------------------------------------------------------------------------
 toggleFilters();
