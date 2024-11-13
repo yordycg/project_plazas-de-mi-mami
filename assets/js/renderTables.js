@@ -194,7 +194,7 @@ const createProductRow = (producto, index) => {
   }</p>
       </td>
       <td>${producto.stockMinimo}</td>
-      <td>
+      <td class="center--col--table">
         <button class="btn btn--update btn--icon">
           <i class="bi bi-pencil-square"></i>
         </button>
