@@ -221,9 +221,6 @@
 
         <!-- ----------- TABLA INVENTARIO ----------- -->
 
-        <!-- TODO: hacer que las 2 primeras columnas (check y ID) se hagan mas delgadas -->
-        <!-- TODO: trabajar los media queries -->
-
         <section class="table--section--products">
           <!--
           <table class="table">
@@ -347,68 +344,6 @@
       </main>
 
       <!-- ----------- MODAL: MODIFICAR PRODUCTO ----------- -->
-      <dialog id="modal--update--product">
-        <header>
-          <button id="btn--close--modal" class="btn btn--icon btn--close">
-            <i class="bi bi-x"></i>
-          </button>
-          <h2>Editar Producto</h2>
-        </header>
-
-        <form method="dialog">
-          <input type="hidden" name="id" />
-
-          <div class="form--group">
-            <label for="nombre">Nombre del producto</label>
-            <input type="text" id="nombre" name="nombre" required />
-          </div>
-
-          <div class="form--group">
-            <label for="categoria">Categoría</label>
-            <input type="text" id="categoria" name="categoria" required />
-          </div>
-
-          <div class="form--group">
-            <label for="tipoUnidad">Tipo de Unidad</label>
-            <input type="text" id="tipoUnidad" name="tipoUnidad" required />
-          </div>
-
-          <div class="form--group">
-            <label for="marca">Marca</label>
-            <input type="text" id="marca" name="marca" required />
-          </div>
-
-          <div class="form--group">
-            <label for="precioVenta">Precio Venta</label>
-            <input type="number" id="precioVenta" name="precioVenta" required />
-          </div>
-
-          <div class="form--group">
-            <label for="precioCompra">Precio Compra</label>
-            <input type="number" id="precioCompra" name="precioCompra" required />
-          </div>
-
-          <div class="form--group">
-            <label for="stock">Stock</label>
-            <input type="number" id="stock" name="stock" required />
-          </div>
-
-          <div class="form--group">
-            <label for="stockMinimo">Stock Mínimo</label>
-            <input type="number" id="stockMinimo" name="stockMinimo" required />
-          </div>
-
-          <div class="form--actions">
-            <button type="submit" class="btn btn--primary">Guardar cambios</button>
-            <button
-              type="button"
-              class="btn btn--secondary"
-              onclick="this.closest('dialog').close()">
-              Cancelar
-            </button>
-          </div>
-        </form>
-      </dialog>
 
       <!-- TODO: hacer modal funcional, usar javascript -->
       <!--

@@ -100,9 +100,6 @@ Desktop Large: >= 1201px
   .main--header--buttons .btn span {
     display: none; /* Oculta el texto, deja solo iconos */
   }
-  
-  .main--header--buttons .btn {
-  }
 }
 
 /*------------------------------------------------------------------------------------------------*/
@@ -113,18 +110,38 @@ Desktop Large: >= 1201px
     font-size: 50%; /* Reduce el tamaño base de fuente a 8px */
   }
 
+  /* Login ---------------------------------------------------------------------------------------*/
+  .login--form--box {
+    font-size: 1.4rem;
+  }
+  .login--form--box h1 {
+    font-size: 2.4rem;
+  }
+  .login--form--box h2,
+  .modal--login--section h2 {
+    font-size: 1.8rem;
+  }
+  .login--form button {
+    font-size: 1.4rem;
+  }
+  .login--img {
+    height: 100%;
+  }
+
+  /* ALL HTML ------------------------------------------------------------------------------------*/
   /* Container Grid */
   .container--grid {
     grid-template-columns: 6rem 1fr;
     position: relative;
   }
 
-  /* Header */
+
+  /* HEADER --------------------------------------------------------------------------------------*/
   .header--section {
     padding: 0 6.4rem;
   }
 
-  /* Sidebar */
+  /* SIDEBAR Y FOOTER-----------------------------------------------------------------------------*/
   /* sidebar y footer */
   .sidebar--section,
   .footer--section {
@@ -163,7 +180,7 @@ Desktop Large: >= 1201px
     visibility: visible;
   }
 
-  /* Main */
+  /* MAIN ----------------------------------------------------------------------------------------*/
   .main--section {
     position: relative;
     z-index: 1;
@@ -217,7 +234,7 @@ Desktop Large: >= 1201px
     padding: 0.8rem;
   }
 
-  /* Footer */
+  /* FOOTER --------------------------------------------------------------------------------------*/
   /* footer especifico */
   .footer--section {
     position: absolute;
@@ -236,11 +253,38 @@ Desktop Large: >= 1201px
 /* MOBILE (<= 480px) */
 /*------------------------------------------------------------------------------------------------*/
 @media (width <= 480px) {
+
+  /* Login ---------------------------------------------------------------------------------------*/
+  .login {
+    grid-template-columns: 1fr;
+  }
+  .login--img--box {
+    display: none;
+  }
+  .login--form--box {
+    font-size: 1.4rem;
+  }
+  .login--form--box h1 {
+    font-size: 2.4rem;
+  }
+  .login--form--box h2,
+  .modal--login--section h2 {
+    font-size: 1.8rem;
+  }
+  .login--form button {
+    font-size: 1.4rem;
+  }
+  .modal--login--section {
+    width: 40rem;
+  }
+
+  /* ALL HTML - LOGIN ----------------------------------------------------------------------------*/
   /* Container Grid - ocupar todo el ancho */
   .container--grid {
     grid-template-columns: 1fr;
   }
 
+  /* SIDEBAR Y FOOTER ----------------------------------------------------------------------------*/
   /* Sidebar y footer por defecto */
   .sidebar--section,
   .footer--section {
@@ -282,12 +326,34 @@ Desktop Large: >= 1201px
   }
 
 
+  /* MAIN ----------------------------------------------------------------------------------------*/
   /* Main section - ocupar todo el ancho */
   .main--section {
     grid-column: 1;
     width: 100%;
   }
 
+  /* Header-Buttons ------------------------------------------------------------------------------*/
+  /* Centrar botones en el header cuando hay 2 botones (sin filtros) */
+  .main--section header:has(.main--header--buttons) {
+    justify-content: center !important;
+  }
+
+
+  /* Formularios ---------------------------------------------------------------------------------*/
+  .main--section form {
+    flex-grow: 1;
+  }
+  .form--group,
+  .form--group input,
+  .form--group select,
+  .form--group button{
+    grid-column: span 6 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* HEADER --------------------------------------------------------------------------------------*/
   /* Header siempre visible */
   .header--section {
     padding: 0 3.2rem;
