@@ -325,8 +325,6 @@ Desktop Large: >= 1201px
   }
 }
 
-
-
 @media (width <= 730px) {
   .search--filters #btn-filter span {
     display: none !important;
@@ -336,8 +334,3 @@ Desktop Large: >= 1201px
     margin-right: 0 !important;
   }
 }
-
-
-
-
-

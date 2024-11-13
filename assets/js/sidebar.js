@@ -7,17 +7,27 @@ export function toggleSidebar() {
   const footerSpan = document.querySelector('.footer--section span');
   const searchInput = document.querySelector('.search input');
   const searchIcon = document.querySelector('.search--icon');
+  const listIcon = document.querySelector('.bi-list');
+  const xIcon = document.querySelector('.bi-x-lg');
 
   function toggleSidebarFooter() {
     // Verificar si estamos en móvil (<=480px)
     const isMobile = window.matchMedia('(max-width: 480px)').matches;
 
     if (isMobile) {
-      // Lógica para móvil
       sidebar.classList.toggle('show');
       footer.classList.toggle('show');
+
+      // cambiar el icono del botón
+      if (sidebar.classList.contains('show')) {
+        listIcon.classList.add('none');
+        xIcon.classList.remove('none');
+      } else {
+        listIcon.classList.remove('none');
+        xIcon.classList.add('none');
+      }
     } else {
-      // Lógica para desktop
+      // Código desktop
       sidebar.classList.toggle('close');
       footer.classList.toggle('close');
       toggleBtn.classList.toggle('rotate');
